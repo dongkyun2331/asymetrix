@@ -1,0 +1,13 @@
+.Header {
+}
+
+.logo-img {
+  width: 54px;
+}
+
+@media (min-width: 1024px) {
+  .Header {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}

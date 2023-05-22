@@ -19,6 +19,11 @@ li {
   list-style: none;
 }
 
+button {
+  border: none;
+  background-color: #fff;
+}
+
 .App {
   height: 1000vh;
 }

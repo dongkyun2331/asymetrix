@@ -3,14 +3,7 @@ import "./Header.css";
 
 export default function Header() {
   const [isLogoHovered, setIsLogoHovered] = useState(false);
-
-  const handleMouseEnter = () => {
-    setIsLogoHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsLogoHovered(false);
-  };
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +17,18 @@ export default function Header() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const handleMouseEnter = () => {
+    setIsLogoHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsLogoHovered(false);
+  };
+
+  const handleToggle = () => {
+    setIsDarkMode(!isDarkMode);
+  };
 
   return (
     <div className="Header">
@@ -44,17 +49,21 @@ export default function Header() {
           PROTOCOL
         </h1>
       </a>
-      <ul className="nav">
-        <li className="draws">DRAWS</li>
-        <li className="app">APP</li>
-        <li>
-          DARK MODE <input type="checkbox" id="toggle" hidden />
-          <label for="toggle" className="toggleSwitch">
-            <span className="toggleButton"></span>
-          </label>
-        </li>
-        <li className="connect_wallet">CONNECT WALLET</li>
-      </ul>
+      <nav>
+        <button className="draws">DRAWS</button>
+        <button className="app">APP</button>
+        <button className="toggle" onClick={handleToggle}>
+          <span>DARK MODE</span>
+          <div
+            className={`toggleContainer ${
+              isDarkMode ? "darkmodeContainer" : ""
+            }`}
+          >
+            <span className={`circle ${isDarkMode ? "darkmode" : ""}`}></span>
+          </div>
+        </button>
+        <button className="connect_wallet">CONNECT WALLET</button>
+      </nav>
     </div>
   );
 }

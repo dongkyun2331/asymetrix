@@ -48,14 +48,14 @@
   font-weight: 500;
 }
 
-.nav {
+nav {
   display: flex;
   color: #222;
   line-height: 24px;
   gap: 15px;
 }
 
-.nav > li {
+nav > button {
   font-size: 15px;
   padding: 0 16px;
   display: flex;
@@ -65,7 +65,7 @@
 .draws {
   cursor: pointer;
   opacity: 0.3;
-  transition: 0.4s;
+  transition: 0.5s;
 }
 
 .draws:hover {
@@ -74,44 +74,43 @@
   border-radius: 10px;
 }
 
-.app {
-  cursor: context-menu;
-}
-
-.toggleSwitch {
-  width: 24px;
-  height: 11px;
-  display: block;
-  position: relative;
-  border-radius: 30px;
-  background-color: #222;
+.toggle {
   cursor: pointer;
-  margin: 10px;
+  transition: 0.5s;
 }
 
-.toggleSwitch .toggleButton {
-  width: 11px;
-  height: 11px;
+.toggle:hover {
+  background-color: #eee;
+  border-radius: 10px;
+}
+
+.toggleContainer {
+  width: 24px;
+  height: 12px;
+  background-color: #222;
+  border-radius: 30px;
+  margin-left: 8px;
+  position: relative;
+}
+
+.darkmodeContainer {
+  background-color: #fff;
+}
+
+.circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 20px;
+  background-color: #fff;
   position: absolute;
-  top: 50%;
-  left: 1px;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  background: #fff;
+  top: 0;
+  left: 0;
+  transition: 0.1s;
 }
 
-#toggle:checked ~ .toggleSwitch {
-  background: #fff;
-}
-
-#toggle:checked ~ .toggleSwitch .toggleButton {
-  left: calc(100% - 11px);
-  background: #222;
-}
-
-.toggleSwitch,
-.toggleButton {
-  transition: all 0.2s ease-in;
+.darkmode {
+  transform: translateX(11px);
+  background-color: #222;
 }
 
 .connect_wallet {
@@ -127,6 +126,7 @@
     #f3d8f3 70%,
     #e3ecfb 105.99%
   );
+  padding: 0 16px;
   height: 40px;
 }
 

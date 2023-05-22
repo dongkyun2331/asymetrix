@@ -31,7 +31,7 @@ export default function Header() {
   };
 
   return (
-    <header>
+    <header className="Header">
       <a
         className="logo"
         href=""

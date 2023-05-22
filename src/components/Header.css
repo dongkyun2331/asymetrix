@@ -1,8 +1,24 @@
 .Header {
 }
 
+.logo {
+  display: flex;
+}
+
 .logo-img {
-  width: 54px;
+  width: 42px;
+  height: 54px;
+  transition: all 0.3s;
+  margin-right: 10px;
+}
+
+.logo-hover-effect {
+  transform-origin: top;
+  transform: rotate(-20deg);
+}
+
+.logo > h1 {
+  z-index: 1;
 }
 
 @media (min-width: 1024px) {

@@ -45,9 +45,14 @@ export default function Header() {
         </h1>
       </a>
       <ul className="nav">
-        <li>DRAWS</li>
-        <li>APP</li>
-        <li>DARK MODE</li>
+        <li className="draws">DRAWS</li>
+        <li className="app">APP</li>
+        <li>
+          DARK MODE <input type="checkbox" id="toggle" hidden />
+          <label for="toggle" className="toggleSwitch">
+            <span className="toggleButton"></span>
+          </label>
+        </li>
         <li className="connect_wallet">CONNECT WALLET</li>
       </ul>
     </div>

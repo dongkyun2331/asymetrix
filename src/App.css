@@ -22,10 +22,3 @@ li {
 .App {
   height: 1000vh;
 }
-
-@media (min-width: 640px) {
-  .App {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}

@@ -31,7 +31,7 @@ export default function Header() {
   };
 
   return (
-    <div className="Header">
+    <header>
       <a
         className="logo"
         href=""
@@ -64,6 +64,6 @@ export default function Header() {
         </button>
         <button className="connect_wallet">CONNECT WALLET</button>
       </nav>
-    </div>
+    </header>
   );
 }

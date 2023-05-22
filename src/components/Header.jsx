@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Header.css";
 
 export default function Header() {
@@ -11,6 +11,19 @@ export default function Header() {
   const handleMouseLeave = () => {
     setIsLogoHovered(false);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const menu = document.querySelector(".Header");
+      menu.classList.toggle("sticky", window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div className="Header">

@@ -1,5 +1,26 @@
 .Header {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 1;
+  transition: height 0.5s, background-color 0.5s;
+  background-color: #fff;
+  padding: 0 100px;
+}
+
+.Header.sticky {
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+}
+
+.container {
+  display: flex;
   justify-content: space-between;
 }
 
@@ -36,26 +57,34 @@
 .nav > li {
   font-size: 16px;
   padding: 0 16px;
+  display: flex;
+  align-items: center;
 }
 
 .connect_wallet {
-  flex: 1 1 auto;
-  text-align: center;
-  text-transform: uppercase;
+  cursor: pointer;
   transition: 0.5s;
   background-size: 200% auto;
-  box-shadow: 0 0 20px #eee;
   border-radius: 10px;
   background-image: linear-gradient(
-    to right,
-    #fbc2eb 0%,
-    #a6c1ee 51%,
-    #fbc2eb 100%
+    91.08deg,
+    #e3ecfb -3.34%,
+    #f3d8f3 25.84%,
+    #cdf1ec 50.99%,
+    #f3d8f3 70%,
+    #e3ecfb 105.99%
   );
 }
 
 .connect_wallet:hover {
   background-position: right center;
+}
+
+@media (min-width: 640px) {
+  .connect_wallet {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
 }
 
 @media (min-width: 1024px) {

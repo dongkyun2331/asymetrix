@@ -1,4 +1,6 @@
 .Header {
+  display: flex;
+  justify-content: space-between;
 }
 
 .logo {
@@ -19,6 +21,14 @@
 
 .logo > h1 {
   z-index: 1;
+  font-size: 18px;
+  color: #222;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.nav {
+  display: flex;
 }
 
 @media (min-width: 1024px) {

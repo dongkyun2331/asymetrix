@@ -31,6 +31,12 @@ export default function Header() {
           PROTOCOL
         </h1>
       </a>
+      <ul className="nav">
+        <li>DRAWS</li>
+        <li>APP</li>
+        <li>DARK MODE</li>
+        <li>CONNECT WALLET</li>
+      </ul>
     </div>
   );
 }

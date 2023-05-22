@@ -35,7 +35,7 @@ export default function Header() {
         <li>DRAWS</li>
         <li>APP</li>
         <li>DARK MODE</li>
-        <li>CONNECT WALLET</li>
+        <li className="connect_wallet">CONNECT WALLET</li>
       </ul>
     </div>
   );

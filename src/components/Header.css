@@ -29,6 +29,33 @@
 
 .nav {
   display: flex;
+  color: #222;
+  line-height: 24px;
+}
+
+.nav > li {
+  font-size: 16px;
+  padding: 0 16px;
+}
+
+.connect_wallet {
+  flex: 1 1 auto;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  background-image: linear-gradient(
+    to right,
+    #fbc2eb 0%,
+    #a6c1ee 51%,
+    #fbc2eb 100%
+  );
+}
+
+.connect_wallet:hover {
+  background-position: right center;
 }
 
 @media (min-width: 1024px) {

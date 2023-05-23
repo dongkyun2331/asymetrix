@@ -45,7 +45,7 @@ export default function Header() {
           ></path>
         </svg>
       </a>
-      <nav>
+      <nav className="nav">
         <button className="draws">DRAWS</button>
         <button className="app">APP</button>
         <button className="toggle" onClick={handleToggle}>
@@ -59,6 +59,9 @@ export default function Header() {
           </div>
         </button>
         <button className="connect_wallet">CONNECT WALLET</button>
+      </nav>
+      <div className="width1024">
+        <button className="connect_wallet">CONNECT WALLET</button>
         <button className="bars">
           <svg className="bars-svg">
             <path d="M6 26H30" stroke="#222" stroke-width="2"></path>
@@ -66,7 +69,7 @@ export default function Header() {
             <path d="M6 10H30" stroke="#222" stroke-width="2"></path>
           </svg>
         </button>
-      </nav>
+      </div>
     </header>
   );
 }

@@ -25,7 +25,7 @@ export default function Header() {
     <header className="Header">
       <a className="logo" href="">
         <svg className="logo-svg">
-          <g>
+          <g className="logo-g">
             <path
               d="M1 22.5008L22.4292 1L43 13L25 55L1 22.5008Z"
               fill="#fff"

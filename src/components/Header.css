@@ -24,13 +24,20 @@ header.sticky {
   justify-content: space-between;
 }
 
-.logo-svg {
-  margin-top: 100px;
+.logo {
+  padding-top: 100px;
 }
 
-.logo-hover-effect {
-  transform-origin: top;
-  transform: rotate(-20deg);
+.logo-svg {
+  overflow: visible;
+}
+
+.logo-g {
+  transition: 0.5s;
+}
+
+.logo-svg:hover .logo-g {
+  transform: rotate(-23deg);
 }
 
 nav {

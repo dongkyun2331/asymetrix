@@ -59,6 +59,13 @@ export default function Header() {
           </div>
         </button>
         <button className="connect_wallet">CONNECT WALLET</button>
+        <button className="bars">
+          <svg className="bars-svg">
+            <path d="M6 26H30" stroke="#222" stroke-width="2"></path>
+            <path d="M6 18H30" stroke="#222" stroke-width="2"></path>
+            <path d="M6 10H30" stroke="#222" stroke-width="2"></path>
+          </svg>
+        </button>
       </nav>
     </header>
   );

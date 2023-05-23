@@ -5,25 +5,31 @@ import { BsMedium, BsDiscord } from "react-icons/bs";
 export default function Footer() {
   return (
     <footer>
-      <a href="">SMART CONTRACT AUDIT</a>
-      <a href="">
+      <a href="" className="footer-a">
+        SMART CONTRACT AUDIT
+      </a>
+      <a href="" className="footer-a">
         <FaGithub size={14} className="icon" />
         GITHUB
       </a>
-      <a href="">
+      <a href="" className="footer-a">
         <FaTwitter size={14} className="icon" />
         TWITTER
       </a>
-      <a href="">
+      <a href="" className="footer-a">
         <BsMedium size={14} className="icon" />
         MEDIUM
       </a>
-      <a href="">
+      <a href="" className="footer-a">
         <BsDiscord size={14} className="icon" />
         DISCORD
       </a>
-      <a href="">DOCUMENTATION</a>
-      <a href="">TOKENOMICS</a>
+      <a href="" className="footer-a">
+        DOCUMENTATION
+      </a>
+      <a href="" className="footer-a">
+        TOKENOMICS
+      </a>
     </footer>
   );
 }

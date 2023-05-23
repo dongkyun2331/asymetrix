@@ -9,7 +9,7 @@ footer {
   padding: 48px 24px;
 }
 
-a {
+.footer-a {
   height: 40px;
   padding: 0 16px;
   display: flex;

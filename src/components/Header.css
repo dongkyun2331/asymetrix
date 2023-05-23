@@ -239,6 +239,7 @@ header.sticky {
     width: 100%;
     display: flex;
     align-items: center;
+    padding: 0 16px;
   }
 
   .draws:hover {
@@ -252,6 +253,7 @@ header.sticky {
     width: 100%;
     display: flex;
     align-items: center;
+    padding: 0 16px;
   }
 
   .app:hover {
@@ -266,6 +268,7 @@ header.sticky {
     width: 100%;
     display: flex;
     align-items: center;
+    padding: 0 16px;
   }
 
   .toggle:hover {

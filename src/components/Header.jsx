@@ -37,13 +37,13 @@ export default function Header() {
               d="M1 22.5008L22.4292 1L43 13L25 55L1 22.5008Z"
               fill="#fff"
               stroke="#222"
-              stroke-width="2"
-              stroke-linejoin="bevel"
+              strokeWidth="2"
+              strokeLinejoin="bevel"
             ></path>
             <path
               d="M22.4287 1L25 55"
               stroke="#222"
-              stroke-dasharray="6 3"
+              strokeDasharray="6 3"
             ></path>
           </g>
           <path
@@ -71,9 +71,9 @@ export default function Header() {
         <button className="connect_wallet">CONNECT WALLET</button>
         <button className="bars" onClick={handleBarsClick}>
           <svg className="bars-svg">
-            <path d="M6 26H30" stroke="#222" stroke-width="2"></path>
-            <path d="M6 18H30" stroke="#222" stroke-width="2"></path>
-            <path d="M6 10H30" stroke="#222" stroke-width="2"></path>
+            <path d="M6 26H30" stroke="#222" strokeWidth="2"></path>
+            <path d="M6 18H30" stroke="#222" strokeWidth="2"></path>
+            <path d="M6 10H30" stroke="#222" strokeWidth="2"></path>
           </svg>
         </button>
       </div>
@@ -85,13 +85,13 @@ export default function Header() {
                 d="M1 22.5008L22.4292 1L43 13L25 55L1 22.5008Z"
                 fill="#222"
                 stroke="#fff"
-                stroke-width="2"
-                stroke-linejoin="bevel"
+                strokeWidth="2"
+                strokeLinejoin="bevel"
               ></path>
               <path
                 d="M22.4287 1L25 55"
                 stroke="#fff"
-                stroke-dasharray="6 3"
+                strokeDasharray="6 3"
               ></path>
             </g>
             <path

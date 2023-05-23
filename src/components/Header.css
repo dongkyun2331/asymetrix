@@ -144,10 +144,13 @@ nav > button {
   width: 100%;
   position: fixed;
   top: -272.8px;
+  left: 0;
   background-color: #222;
   transition: 0.3s;
   padding: 12px;
   z-index: 1;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .modal.modal-on {

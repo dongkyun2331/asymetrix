@@ -34,14 +34,14 @@ header.sticky {
   transform: rotate(-23deg);
 }
 
-nav {
+.nav {
   display: flex;
   color: #222;
   line-height: 24px;
   gap: 15px;
 }
 
-nav > button {
+.nav > button {
   font-size: 15px;
   padding: 0 16px;
   display: flex;
@@ -58,6 +58,10 @@ nav > button {
   opacity: 1;
   background-color: #eee;
   border-radius: 10px;
+}
+
+.app {
+  transition: 0.5s;
 }
 
 .toggle {
@@ -193,6 +197,10 @@ nav > button {
   display: inherit;
 }
 
+.modal-nav {
+  display: grid;
+}
+
 @keyframes heartBeat {
   0% {
     transform: none;
@@ -222,6 +230,46 @@ nav > button {
   .bars:hover {
     will-change: transform;
     animation: heartBeat 1s linear infinite;
+  }
+
+  .draws {
+    color: #fff;
+    font-size: 16px;
+    height: 3.5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .draws:hover {
+    background-color: #666;
+  }
+
+  .app {
+    color: #fff;
+    font-size: 16px;
+    height: 3.5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .app:hover {
+    background-color: #666;
+    border-radius: 10px;
+  }
+
+  .toggle {
+    color: #fff;
+    font-size: 16px;
+    height: 3.5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .toggle:hover {
+    background-color: #666;
   }
 }
 

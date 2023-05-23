@@ -106,6 +106,20 @@ export default function Header() {
             </svg>
           </button>
         </div>
+        <nav className="modal-nav">
+          <a className="draws">DRAWS</a>
+          <a className="app">APP</a>
+          <a className="toggle" onClick={handleToggle}>
+            <span>DARK MODE</span>
+            <div
+              className={`toggleContainer ${
+                isDarkMode ? "darkmodeContainer" : ""
+              }`}
+            >
+              <span className={`circle ${isDarkMode ? "darkmode" : ""}`}></span>
+            </div>
+          </a>
+        </nav>
       </div>
       <div className="blur"></div>
     </header>

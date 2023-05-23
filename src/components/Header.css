@@ -157,6 +157,28 @@ nav > button {
   top: 0;
 }
 
+.modal-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.close {
+  background-color: #222;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.close-svg {
+  width: 36px;
+  height: 36px;
+  background-color: #222;
+}
+
+.close:hover .close-svg {
+  will-change: transform;
+  animation: heartBeat 1s linear infinite;
+}
+
 .blur {
   position: fixed;
   top: 0;
@@ -214,6 +236,10 @@ nav > button {
   }
 
   .width1024 {
+    display: inherit;
+  }
+
+  .modal {
     display: inherit;
   }
 }

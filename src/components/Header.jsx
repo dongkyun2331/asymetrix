@@ -99,6 +99,12 @@ export default function Header() {
               fill="#fff"
             ></path>
           </svg>
+          <button className="close" onClick={handleBarsClick}>
+            <svg className="close-svg">
+              <path d="M6 29.5L29 6.5" stroke="#fff" strokeWidth="3"></path>
+              <path d="M29 29.5L6 6.5" stroke="#fff" strokeWidth="3"></path>
+            </svg>
+          </button>
         </div>
       </div>
       <div className="blur"></div>

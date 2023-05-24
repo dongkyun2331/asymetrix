@@ -1,6 +1,28 @@
 import "./BodyApp.css";
+import React, { useState, useEffect } from "react";
 
 export default function BodyApp() {
+  const [number, setNumber] = useState(0);
+
+  useEffect(() => {
+    const targetNumber = 4.450077;
+    const duration = 2000;
+    const increment = ((targetNumber - number) / duration) * 10;
+
+    const timer = setInterval(() => {
+      setNumber((prevNumber) => {
+        const newNumber = prevNumber + increment;
+        if (newNumber >= targetNumber) {
+          clearInterval(timer);
+          return targetNumber;
+        }
+        return newNumber;
+      });
+    }, 10);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div>
       <section className="section">
@@ -21,6 +43,13 @@ export default function BodyApp() {
               PREVIOUS DRAWS
             </a>
           </h3>
+          <div className="mint-content">
+            <div className="total">
+              <h4>TOTAL</h4>
+              <span>{number.toFixed(6)}</span>
+              <p>stETH</p>
+            </div>
+          </div>
         </div>
         <div className="lavender"></div>
       </section>

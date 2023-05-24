@@ -49,6 +49,23 @@ export default function BodyApp() {
               <span>{number.toFixed(6)}</span>
               <p>stETH</p>
             </div>
+            <div className="rewards">
+              <h4>REWARDS</h4>
+              <div>
+                <div>
+                  <span>2.22</span>
+                  <p>stETH</p>
+                </div>
+                <div>
+                  <span>1.33</span>
+                  <p>stETH</p>
+                </div>
+                <div>
+                  <span>0.89</span>
+                  <p>stETH</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div className="lavender"></div>

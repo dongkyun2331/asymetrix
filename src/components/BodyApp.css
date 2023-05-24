@@ -14,8 +14,31 @@
   padding: 20px;
 }
 
+.h3 {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+.previous_draws {
+  font-size: 14px !important;
+}
+
+.previous_draws-svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 12px;
+}
+
 .lavender {
   padding: 1rem;
   border-radius: 1rem;
   background-color: #e3ecfb;
+}
+
+@media (min-width: 640px) and (max-width: 1024px) {
+  .section {
+    padding: 0 24px;
+    display: block;
+  }
 }

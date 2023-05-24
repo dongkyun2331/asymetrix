@@ -121,7 +121,7 @@ export default function Header() {
           </a>
         </nav>
       </div>
-      <div className="blur"></div>
+      <div className="blur" onClick={handleBarsClick}></div>
     </header>
   );
 }

@@ -1,0 +1,21 @@
+.section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  padding: 0 100px;
+  margin-top: 150px;
+  height: 512.6px;
+}
+
+.mint {
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #cdf1ec;
+  padding: 20px;
+}
+
+.lavender {
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #e3ecfb;
+}

@@ -214,6 +214,12 @@ header.sticky {
   }
 }
 
+@media (max-width: 1262px) {
+  header {
+    padding: 0 24px;
+  }
+}
+
 @media (min-width: 640px) and (max-width: 1024px) {
   header {
     padding: 0 24px;

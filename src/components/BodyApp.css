@@ -13,8 +13,8 @@
 .section {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 1.5rem;
   padding: 0 100px;
+  gap: 1.5rem;
   margin-top: 140px;
 }
 
@@ -141,6 +141,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 69px 0;
 }
 
 .ends_in > section {
@@ -209,5 +210,25 @@
   .section {
     padding: 0 24px;
     display: block;
+  }
+}
+
+@media (max-width: 1262px) {
+  .section {
+    padding: 0 24px;
+  }
+
+  .mint-content {
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 2fr 2fr;
+  }
+
+  .ends_in {
+    border-top: 1px solid #fff;
+  }
+
+  .initial_distribution {
+    grid-column: span 1;
+    margin-top: 0;
   }
 }

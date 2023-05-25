@@ -206,10 +206,24 @@
   background-color: #e3ecfb;
 }
 
+@media (max-width: 640px) {
+  .section {
+    display: block;
+  }
+
+  .mint {
+    margin-bottom: 1.5rem;
+  }
+}
+
 @media (min-width: 640px) and (max-width: 1024px) {
   .section {
     padding: 0 24px;
     display: block;
+  }
+
+  .mint {
+    margin-bottom: 1.5rem;
   }
 }
 

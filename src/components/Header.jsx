@@ -32,6 +32,27 @@ export default function Header() {
     footer.classList.toggle("blur");
   };
 
+  useEffect(() => {
+    const modal = document.querySelector(".modal");
+    const dimm = document.querySelector(".dimm");
+    const bodyapp = document.querySelector(".bodyapp");
+    const footer = document.querySelector(".footer");
+    const handleKeyPress = (event) => {
+      if (event.key === "Escape") {
+        modal.classList.remove("modal-on");
+        dimm.classList.remove("modal-on");
+        bodyapp.classList.remove("blur");
+        footer.classList.remove("blur");
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyPress);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyPress);
+    };
+  }, []);
+
   return (
     <header className="Header">
       <a className="logo" href="">

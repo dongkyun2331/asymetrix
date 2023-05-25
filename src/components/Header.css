@@ -193,7 +193,7 @@ header.sticky {
   display: none;
 }
 
-.blur.modal-on {
+.dimm.modal-on {
   display: inherit;
 }
 

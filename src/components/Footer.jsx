@@ -4,7 +4,7 @@ import { BsMedium, BsDiscord } from "react-icons/bs";
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className="footer">
       <a href="" className="footer-a">
         SMART CONTRACT AUDIT
       </a>

@@ -101,7 +101,7 @@ export default function BodyApp() {
   };
 
   return (
-    <div>
+    <div className="bodyapp">
       <section className="section">
         <div className="mint">
           <h3 className="h3">

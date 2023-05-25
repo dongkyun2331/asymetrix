@@ -23,9 +23,13 @@ export default function Header() {
 
   const handleBarsClick = () => {
     const modal = document.querySelector(".modal");
-    const blur = document.querySelector(".blur");
+    const dimm = document.querySelector(".dimm");
+    const bodyapp = document.querySelector(".bodyapp");
+    const footer = document.querySelector(".footer");
     modal.classList.toggle("modal-on");
-    blur.classList.toggle("modal-on");
+    dimm.classList.toggle("modal-on");
+    bodyapp.classList.toggle("blur");
+    footer.classList.toggle("blur");
   };
 
   return (
@@ -121,7 +125,7 @@ export default function Header() {
           </a>
         </nav>
       </div>
-      <div className="blur" onClick={handleBarsClick}></div>
+      <div className="dimm" onClick={handleBarsClick}></div>
     </header>
   );
 }

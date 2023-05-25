@@ -147,6 +147,66 @@ export default function Header() {
         </nav>
       </div>
       <div className="dimm" onClick={handleBarsClick}></div>
+      <div className="connect_wallet-modal">
+        <h2>
+          CONNECT WALLET{" "}
+          <button>
+            <svg width="24" height="24" viewBox="0 0 36 36">
+              <path d="M6 29.5L29 6.5" stroke="#222" strokeWidth="3"></path>
+              <path d="M29 29.5L6 6.5" stroke="#222" strokeWidth="3"></path>
+            </svg>
+          </button>
+        </h2>
+        <div className="connect_wallet-modal-btns">
+          <button>
+            <svg width="16" height="16">
+              <path
+                d="M4 6.5L7 4.5L1 0L5.5 2H8V12H7.5L7 12.5L5 11H0.5L1.5 7.5L4 6.5Z"
+                fill="#F4831F"
+              ></path>
+              <path
+                d="M12 6.5L9 4.5L15 0L10.5 2H8V12H8.5L9 12.5L11 11H15.5L14.5 7.5L12 6.5Z"
+                fill="#F4831F"
+              ></path>
+              <path
+                d="M8 13.5V15H6.5L5 13.5L7 12.5L6.5 13.5H8Z"
+                fill="#BEAB9C"
+              ></path>
+              <path
+                d="M8 13.5V15H9.5L11 13.5L9 12.5L9.5 13.5H8Z"
+                fill="#BEAB9C"
+              ></path>
+              <path d="M8 13.5V12H7.5L7 12.5L6.5 13.5H8Z" fill="#222"></path>
+              <path d="M8 13.5V12H8.5L9 12.5L9.5 13.5H8Z" fill="#222"></path>
+              <path
+                d="M5 11L7 12.5L5 13.5L1.5 14.5L0.5 11H3L5 13.5V11Z"
+                fill="#E27625"
+              ></path>
+              <path
+                d="M11 11L9 12.5L11 13.5L14.5 14.5L15.5 11H13L11 13.5V11Z"
+                fill="#E27625"
+              ></path>
+              <path d="M5 13.5V11H3L5 13.5Z" fill="#CB6128"></path>
+              <path d="#CB6128"></path>
+              <path d="M11 13.5V11H13L11 13.5Z" fill="#CB6128"></path>
+              <path d="M6 9L7 10L5 9.5L6 9Z" fill="#222"></path>
+              <path d="M10 9L9 10L11 9.5L10 9Z" fill="#222"></path>
+              <path d="M4 8L5 9.5L6 9L7 10V8H4Z" fill="#CD6427"></path>
+              <path d="M12 8L11 9.5L10 9L9 10V8H12Z" fill="#CD6427"></path>
+              <path d="M7 4.5L4 8H7V4.5Z" fill="#E27624"></path>
+              <path d="M9 4.5L12 8H9V4.5Z" fill="#E27624"></path>
+              <path
+                d="M7 4.5L1 0L0 2.5L1.5 7.5L4 6.5L7 4.5Z"
+                fill="#763E1A"
+              ></path>
+              <path
+                d="M9 4.5L15 0L16 2.5L14.5 7.5L12 6.5L9 4.5Z"
+                fill="#763E1A"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
     </header>
   );
 }

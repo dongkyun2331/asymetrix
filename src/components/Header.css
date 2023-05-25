@@ -201,6 +201,25 @@ header.sticky {
   display: grid;
 }
 
+.connect_wallet-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 24px;
+  width: 420px;
+}
+
+.connect_wallet-modal > h2 {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
 @keyframes heartBeat {
   0% {
     transform: none;
@@ -354,5 +373,11 @@ header.sticky {
 
   .toggle:hover {
     background-color: #666;
+  }
+}
+
+@media (min-width: 768px) {
+  .connect_wallet-modal {
+    width: 420px;
   }
 }

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 
 export default function BodyApp() {
   const [number, setNumber] = useState(0);
+  const [rewards, setRewards] = useState([0, 0, 0]);
 
   useEffect(() => {
     const targetNumber = 4.450077;
@@ -21,6 +22,37 @@ export default function BodyApp() {
     }, 10);
 
     return () => clearInterval(timer);
+  }, []);
+
+  useEffect(() => {
+    const targetRewards = [2.22, 1.33, 0.89];
+    const duration = 2000;
+    const increment = targetRewards.map(
+      (target, index) => ((target - rewards[index]) / duration) * 10
+    );
+    const timers = [];
+
+    for (let i = 0; i < targetRewards.length; i++) {
+      const timer = setInterval(() => {
+        setRewards((prevRewards) => {
+          const newRewards = [...prevRewards];
+          newRewards[i] += increment[i];
+
+          if (newRewards[i] >= targetRewards[i]) {
+            clearInterval(timer);
+            newRewards[i] = targetRewards[i];
+          }
+
+          return newRewards;
+        });
+      }, 10);
+
+      timers.push(timer);
+    }
+
+    return () => {
+      timers.forEach((timer) => clearInterval(timer));
+    };
   }, []);
 
   return (
@@ -53,15 +85,15 @@ export default function BodyApp() {
               <h4>REWARDS</h4>
               <div className="rewards-content">
                 <div className="rewards-content-div">
-                  <span>2.22</span>
+                  <span>{rewards[0].toFixed(2)}</span>
                   <p>stETH</p>
                 </div>
                 <div className="rewards-content-div">
-                  <span>1.33</span>
+                  <span>{rewards[1].toFixed(2)}</span>
                   <p>stETH</p>
                 </div>
                 <div className="rewards-content-div">
-                  <span>0.89</span>
+                  <span>{rewards[2].toFixed(2)}</span>
                   <p>stETH</p>
                 </div>
               </div>

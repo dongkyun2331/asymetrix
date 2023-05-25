@@ -51,16 +51,16 @@ export default function BodyApp() {
             </div>
             <div className="rewards">
               <h4>REWARDS</h4>
-              <div>
-                <div>
+              <div className="rewards-content">
+                <div className="rewards-content-div">
                   <span>2.22</span>
                   <p>stETH</p>
                 </div>
-                <div>
+                <div className="rewards-content-div">
                   <span>1.33</span>
                   <p>stETH</p>
                 </div>
-                <div>
+                <div className="rewards-content-div">
                   <span>0.89</span>
                   <p>stETH</p>
                 </div>

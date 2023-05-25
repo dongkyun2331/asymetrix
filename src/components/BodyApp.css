@@ -70,6 +70,39 @@
 
 .rewards {
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  width: 50%;
+  border-radius: 16px;
+  padding: 20px 12px;
+}
+
+.rewards > h4 {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.rewards-content {
+  display: flex;
+}
+
+.rewards-content-div {
+  padding: 0 10px 20px 10px;
+  text-align: center;
+}
+
+.rewards-content-div > span {
+  font-size: 28px;
+}
+
+.rewards-content-div > p {
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 15px;
 }
 
 @keyframes heartBeat {

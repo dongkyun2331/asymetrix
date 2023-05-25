@@ -105,7 +105,7 @@ export default function BodyApp() {
       <section className="section">
         <div className="mint">
           <h3 className="h3">
-            DRAW #5
+            <span className="font">DRAW #5</span>
             <a href="" className="previous_draws">
               <svg className="previous_draws-svg">
                 <path
@@ -158,7 +158,7 @@ export default function BodyApp() {
             <div className="initial_distribution">
               <h4>INITIAL DISTRIBUTION</h4>
               <p>0.000000 ASX</p>
-              <span>31.53% APR</span>
+              <span className="font">31.53% APR</span>
               <div className="claim_tokens">
                 <button>
                   <div>

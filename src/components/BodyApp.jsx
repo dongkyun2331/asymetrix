@@ -1,9 +1,11 @@
 import "./BodyApp.css";
 import React, { useState, useEffect } from "react";
+import moment from "moment";
 
 export default function BodyApp() {
   const [number, setNumber] = useState(0);
   const [rewards, setRewards] = useState([0, 0, 0]);
+  const [remainingTime, setRemainingTime] = useState(null);
 
   useEffect(() => {
     const targetNumber = 4.450077;
@@ -55,6 +57,49 @@ export default function BodyApp() {
     };
   }, []);
 
+  useEffect(() => {
+    const targetTime = moment("2023-05-26 15:41");
+
+    const interval = setInterval(() => {
+      const currentTime = moment();
+      const diff = targetTime.diff(currentTime);
+      const duration = moment.duration(diff);
+      const remaining = Math.max(duration.asMilliseconds(), 0);
+
+      setRemainingTime(remaining);
+
+      if (remaining === 0) {
+        clearInterval(interval);
+      }
+    }, 1000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
+  const formatTime = (time) => {
+    const duration = moment.duration(time);
+    const days = Math.floor(duration.asDays());
+    const hours = duration.hours();
+    const minutes = duration.minutes();
+
+    let formattedTime = "";
+
+    if (days > 0) {
+      formattedTime += `${days}d `;
+    }
+    if (hours > 0) {
+      formattedTime += `${hours}h `;
+    }
+
+    if (minutes > 0) {
+      formattedTime += `${minutes}min `;
+    }
+
+    return formattedTime;
+  };
+
   return (
     <div>
       <section className="section">
@@ -101,7 +146,13 @@ export default function BodyApp() {
             <div className="ends_in">
               <section>
                 <h4>ENDS IN</h4>
-                <span>1d 3h</span>
+                <span>
+                  {remainingTime !== null ? (
+                    <p> {formatTime(remainingTime)}</p>
+                  ) : (
+                    <p></p>
+                  )}
+                </span>
               </section>
             </div>
             <div className="initial_distribution">

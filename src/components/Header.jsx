@@ -53,6 +53,13 @@ export default function Header() {
     };
   }, []);
 
+  const handleConnectClick = () => {
+    const connectModal = document.querySelector(".connect_wallet-modal");
+    const connectDimm = document.querySelector(".connect-dimm");
+    connectModal.classList.toggle("modal-on");
+    connectDimm.classList.toggle("modal-on");
+  };
+
   return (
     <header className="Header">
       <a className="logo" href="">
@@ -90,10 +97,14 @@ export default function Header() {
             <span className={`circle ${isDarkMode ? "darkmode" : ""}`}></span>
           </div>
         </button>
-        <button className="connect_wallet">CONNECT WALLET</button>
+        <button className="connect_wallet " onClick={handleConnectClick}>
+          CONNECT WALLET
+        </button>
       </nav>
       <div className="width1024">
-        <button className="connect_wallet">CONNECT WALLET</button>
+        <button className="connect_wallet" onClick={handleConnectClick}>
+          CONNECT WALLET
+        </button>
         <button className="bars" onClick={handleBarsClick}>
           <svg className="bars-svg">
             <path d="M6 26H30" stroke="#222" strokeWidth="2"></path>
@@ -150,7 +161,7 @@ export default function Header() {
       <div className="connect_wallet-modal">
         <h2>
           CONNECT WALLET{" "}
-          <button>
+          <button className="connect_wallet-close" onClick={handleConnectClick}>
             <svg width="24" height="24" viewBox="0 0 36 36">
               <path d="M6 29.5L29 6.5" stroke="#222" strokeWidth="3"></path>
               <path d="M29 29.5L6 6.5" stroke="#222" strokeWidth="3"></path>
@@ -158,8 +169,8 @@ export default function Header() {
           </button>
         </h2>
         <div className="connect_wallet-modal-btns">
-          <button>
-            <svg width="16" height="16">
+          <button className="metamask">
+            <svg className="metamask-logo">
               <path
                 d="M4 6.5L7 4.5L1 0L5.5 2H8V12H7.5L7 12.5L5 11H0.5L1.5 7.5L4 6.5Z"
                 fill="#F4831F"
@@ -204,9 +215,11 @@ export default function Header() {
                 fill="#763E1A"
               ></path>
             </svg>
+            MetaMask
           </button>
         </div>
       </div>
+      <div className="connect-dimm" onClick={handleConnectClick}></div>
     </header>
   );
 }

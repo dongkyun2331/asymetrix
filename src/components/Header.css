@@ -201,6 +201,19 @@ header.sticky {
   display: grid;
 }
 
+.connect-dimm {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.connect-dimm.modal-on {
+  display: inherit;
+}
+
 .connect_wallet-modal {
   position: fixed;
   top: 50%;
@@ -208,7 +221,13 @@ header.sticky {
   transform: translate(-50%, -50%);
   background-color: #fff;
   padding: 24px;
-  width: 420px;
+  border-radius: 1rem;
+  display: none;
+}
+
+.connect_wallet-modal.modal-on {
+  display: block;
+  z-index: 1;
 }
 
 .connect_wallet-modal > h2 {
@@ -218,6 +237,35 @@ header.sticky {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.connect_wallet-close {
+  cursor: pointer;
+}
+
+.connect_wallet-close:hover {
+  will-change: transform;
+  animation: heartBeat 1s linear infinite;
+}
+
+.metamask {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  padding: 32px 24px;
+  border: 1px solid #e1e1e1;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.metamask-logo {
+  width: 16px;
+  height: 16px;
+  margin-right: 12px;
 }
 
 @keyframes heartBeat {
@@ -379,5 +427,6 @@ header.sticky {
 @media (min-width: 768px) {
   .connect_wallet-modal {
     width: 420px;
+    max-width: 100%;
   }
 }

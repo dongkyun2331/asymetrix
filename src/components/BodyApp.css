@@ -200,6 +200,10 @@
   display: flex;
 }
 
+.mint-content640 {
+  display: none;
+}
+
 .lavender {
   padding: 1rem;
   border-radius: 1rem;
@@ -213,6 +217,18 @@
 
   .mint {
     margin-bottom: 1.5rem;
+  }
+
+  .previous_draws {
+    display: none;
+  }
+
+  .mint-content {
+    display: none;
+  }
+
+  .mint-content640 {
+    display: inherit;
   }
 }
 

@@ -37,12 +37,16 @@ export default function Header() {
     const dimm = document.querySelector(".dimm");
     const bodyapp = document.querySelector(".bodyapp");
     const footer = document.querySelector(".footer");
+    const connectModal = document.querySelector(".connect_wallet-modal");
+    const connectDimm = document.querySelector(".connect-dimm");
     const handleKeyPress = (event) => {
       if (event.key === "Escape") {
         modal.classList.remove("modal-on");
         dimm.classList.remove("modal-on");
         bodyapp.classList.remove("blur");
         footer.classList.remove("blur");
+        connectModal.classList.remove("modal-on");
+        connectDimm.classList.remove("modal-on");
       }
     };
 

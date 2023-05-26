@@ -13,7 +13,8 @@
 .section {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  padding: 140px 100px 0;
+  padding: 0 100px;
+  margin-top: 140px;
   gap: 1.5rem;
 }
 

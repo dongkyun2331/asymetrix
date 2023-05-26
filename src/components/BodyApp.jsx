@@ -298,7 +298,24 @@ export default function BodyApp() {
             </Slider>
           </div>
         </div>
-        <div className="lavender"></div>
+        <div className="lavender">
+          <h3>MY BALANCE</h3>
+          <div>
+            <h4>IN PROTOCOL</h4>
+            <span>0.000000</span>
+            <p>stETH</p>
+          </div>
+          <hr />
+          <div>
+            <h4>DRAW WINNING ODDS</h4>
+            <p>1</p>
+          </div>
+          <input type="text" />
+          <div>
+            <button></button>
+            <button></button>
+          </div>
+        </div>
       </section>
     </div>
   );

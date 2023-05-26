@@ -26,6 +26,7 @@ export default function Header() {
     const dimm = document.querySelector(".dimm");
     const bodyapp = document.querySelector(".bodyapp");
     const footer = document.querySelector(".footer");
+
     modal.classList.toggle("modal-on");
     dimm.classList.toggle("modal-on");
     bodyapp.classList.toggle("blur");
@@ -60,8 +61,17 @@ export default function Header() {
   const handleConnectClick = () => {
     const connectModal = document.querySelector(".connect_wallet-modal");
     const connectDimm = document.querySelector(".connect-dimm");
+    const logo = document.querySelector(".logo");
+    const nav = document.querySelector(".nav");
+    const bodyapp = document.querySelector(".bodyapp");
+    const footer = document.querySelector(".footer");
+
     connectModal.classList.toggle("modal-on");
     connectDimm.classList.toggle("modal-on");
+    logo.classList.toggle("blur");
+    nav.classList.toggle("blur");
+    bodyapp.classList.toggle("blur");
+    footer.classList.toggle("blur");
   };
 
   return (

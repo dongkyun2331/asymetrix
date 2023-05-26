@@ -204,7 +204,25 @@
   display: none;
 }
 
-.slick-dots {
+.test-css {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.test-css li {
+  display: inline-block;
+  width: 20px;
+  cursor: pointer;
+}
+
+.test-css li button {
+  cursor: pointer;
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: #fff;
 }
 
 .lavender {

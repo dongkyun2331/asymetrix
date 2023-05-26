@@ -190,19 +190,19 @@ export default function BodyApp() {
               </div>
             </div>
           </div>
-          <div className="ming-content768">
-            <Slider {...settings}>
+          <div className="mint-content768">
+            <Slider {...settings} dotsClass="test-css">
               <div>
-                <h3>1</h3>
+                <h3>a</h3>
               </div>
               <div>
-                <h3>2</h3>
+                <h3>b</h3>
               </div>
               <div>
-                <h3>3</h3>
+                <h3>c</h3>
               </div>
               <div>
-                <h3>4</h3>
+                <h3>d</h3>
               </div>
             </Slider>
           </div>

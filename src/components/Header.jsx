@@ -40,6 +40,9 @@ export default function Header() {
     const footer = document.querySelector(".footer");
     const connectModal = document.querySelector(".connect_wallet-modal");
     const connectDimm = document.querySelector(".connect-dimm");
+    const logo = document.querySelector(".logo");
+    const nav = document.querySelector(".nav");
+
     const handleKeyPress = (event) => {
       if (event.key === "Escape") {
         modal.classList.remove("modal-on");
@@ -48,6 +51,8 @@ export default function Header() {
         footer.classList.remove("blur");
         connectModal.classList.remove("modal-on");
         connectDimm.classList.remove("modal-on");
+        logo.classList.remove("blur");
+        nav.classList.remove("blur");
       }
     };
 

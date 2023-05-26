@@ -19,6 +19,11 @@ export default function Header() {
 
   const handleToggle = () => {
     setIsDarkMode(!isDarkMode);
+    const App = document.querySelector(".App");
+    const Header = document.querySelector(".Header");
+
+    App.classList.toggle("c222");
+    Header.classList.toggle("c222");
   };
 
   const handleBarsClick = () => {

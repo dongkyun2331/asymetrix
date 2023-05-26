@@ -61,7 +61,7 @@ export default function BodyApp() {
   }, []);
 
   useEffect(() => {
-    const targetTime = moment("2023-05-26 15:41");
+    const targetTime = moment("2023-06-02 15:41");
 
     const interval = setInterval(() => {
       const currentTime = moment();
@@ -193,16 +193,68 @@ export default function BodyApp() {
           <div className="mint-content768">
             <Slider {...settings} dotsClass="test-css">
               <div>
-                <h3>a</h3>
+                <div className="total">
+                  <h4>TOTAL</h4>
+                  <span>{number.toFixed(6)}</span>
+                  <p>stETH</p>
+                </div>
               </div>
               <div>
-                <h3>b</h3>
+                <div className="rewards">
+                  <h4>REWARDS</h4>
+                  <div className="rewards-content">
+                    <div className="rewards-content-div">
+                      <span>{rewards[0].toFixed(2)}</span>
+                      <p>stETH</p>
+                    </div>
+                    <div className="rewards-content-div">
+                      <span>{rewards[1].toFixed(2)}</span>
+                      <p>stETH</p>
+                    </div>
+                    <div className="rewards-content-div">
+                      <span>{rewards[2].toFixed(2)}</span>
+                      <p>stETH</p>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div>
-                <h3>c</h3>
+                <div className="ends_in">
+                  <section>
+                    <h4>ENDS IN</h4>
+                    <span>
+                      {remainingTime !== null ? (
+                        <p> {formatTime(remainingTime)}</p>
+                      ) : (
+                        <p></p>
+                      )}
+                    </span>
+                  </section>
+                </div>
               </div>
               <div>
-                <h3>d</h3>
+                <div className="initial_distribution">
+                  <h4>INITIAL DISTRIBUTION</h4>
+                  <p>0.000000 ASX</p>
+                  <span className="font">31.53% APR</span>
+                  <div className="claim_tokens">
+                    <button>
+                      <div>
+                        <svg className="previous_draws-svg">
+                          <path
+                            d="M3.5 4H6V5H3.5V4ZM3.5 6H6V7H3.5V6ZM3.5 8H6V9H3.5V8ZM10 4H12.5V5H10V4ZM10 6H12.5V7H10V6ZM10 8H12.5V9H10V8Z"
+                            fill="#222"
+                          ></path>
+                          <path
+                            d="M14 2H2C1.73488 2.0003 1.4807 2.10576 1.29323 2.29323C1.10576 2.4807 1.0003 2.73488 1 3V13C1.0003 13.2651 1.10576 13.5193 1.29323 13.7068C1.4807 13.8942 1.73488 13.9997 2 14H14C14.2651 13.9997 14.5193 13.8942 14.7068 13.7068C14.8942 13.5193 14.9997 13.2651 15 13V3C14.9997 2.73488 14.8942 2.4807 14.7068 2.29323C14.5193 2.10576 14.2651 2.0003 14 2ZM2 3H7.5V13H2V3ZM8.5 13V3H14V13H8.5Z"
+                            fill="#222"
+                          ></path>
+                        </svg>
+                        CLAIM TOKENS
+                      </div>
+                    </button>
+                  </div>
+                </div>
               </div>
             </Slider>
           </div>

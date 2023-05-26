@@ -269,6 +269,42 @@
   .mint-content768 {
     display: inherit;
   }
+
+  .total {
+    margin-top: 64px;
+  }
+
+  .rewards-content {
+    display: block;
+  }
+
+  .rewards {
+    background-color: #cdf1ec;
+    padding: 0;
+  }
+
+  .rewards-content-div {
+    background-color: #fff;
+    margin-bottom: 5px;
+    padding: 16px 8.5rem 20px;
+    border-radius: 1rem;
+  }
+
+  .ends_in {
+    border-top: 1px solid #cdf1ec !important;
+    margin-top: 20px;
+  }
+
+  .initial_distribution {
+    border-top: 1px solid #cdf1ec !important;
+    margin-top: 64px;
+  }
+
+  .claim_tokens > button {
+    background-color: rgba(34, 34, 34, 0.1);
+    box-shadow: none;
+    margin-top: 100px;
+  }
 }
 
 @media (min-width: 640px) and (max-width: 1024px) {

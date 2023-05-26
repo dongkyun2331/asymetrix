@@ -32,6 +32,10 @@ button {
   filter: blur(5px);
 }
 
-.c222 {
+.b222 {
   background-color: #222;
+}
+
+.cfff {
+  color: #fff !important;
 }

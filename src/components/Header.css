@@ -36,7 +36,6 @@ header.sticky {
 
 .nav {
   display: flex;
-  color: #222;
   line-height: 24px;
   gap: 15px;
 }
@@ -49,6 +48,7 @@ header.sticky {
 }
 
 .draws {
+  color: #222;
   cursor: pointer;
   opacity: 0.3;
   transition: 0.5s;
@@ -61,10 +61,12 @@ header.sticky {
 }
 
 .app {
+  color: #222;
   transition: 0.5s;
 }
 
 .toggle {
+  color: #222;
   cursor: pointer;
   transition: 0.5s;
 }
@@ -104,6 +106,7 @@ header.sticky {
 }
 
 .connect_wallet {
+  color: #222;
   cursor: pointer;
   transition: 0.4s;
   background-size: 200%;

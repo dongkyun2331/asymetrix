@@ -23,9 +23,17 @@ export default function Header() {
     setIsDarkMode(!isDarkMode);
     const Header = document.querySelector(".Header");
     const body = document.querySelector("body");
+    const draws = document.querySelector(".draws");
+    const app = document.querySelector(".app");
+    const toggle = document.querySelector(".toggle");
+    const connectWallet = document.querySelector(".connect_wallet");
 
-    Header.classList.toggle("c222");
-    body.classList.toggle("c222");
+    Header.classList.toggle("b222");
+    body.classList.toggle("b222");
+    draws.classList.toggle("cfff");
+    app.classList.toggle("cfff");
+    toggle.classList.toggle("cfff");
+    connectWallet.classList.toggle("cfff");
     if (c222Color === "#fff") {
       setc222Color("#222");
     } else {

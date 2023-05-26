@@ -269,6 +269,15 @@ header.sticky {
   margin-right: 12px;
 }
 
+.connect_wallet-modal-btns > p {
+  padding-top: 24px;
+  font-size: 16px;
+}
+
+.connect_wallet-modal-btns > p > a {
+  text-decoration: underline;
+}
+
 @keyframes heartBeat {
   0% {
     transform: none;

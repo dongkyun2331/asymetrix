@@ -240,6 +240,13 @@ export default function Header() {
             </svg>
             WALLETCONNECT
           </button>
+          <p>
+            By connecting a wallet, you agree to
+            <br />
+            Asymetrix Protocol <a href="">Terms of Service</a> and
+            <br />
+            consent to <a href="">Privacy Policy</a>.
+          </p>
         </div>
       </div>
       <div className="connect-dimm" onClick={handleConnectClick}></div>

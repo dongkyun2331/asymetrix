@@ -105,7 +105,9 @@ export default function BodyApp() {
 
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
+    prevArrow: <></>,
+    nextArrow: <></>,
     slidesToShow: 1,
     slidesToScroll: 1,
   };
@@ -188,7 +190,7 @@ export default function BodyApp() {
               </div>
             </div>
           </div>
-          <div className="ming-content640">
+          <div className="ming-content768">
             <Slider {...settings}>
               <div>
                 <h3>1</h3>
@@ -201,12 +203,6 @@ export default function BodyApp() {
               </div>
               <div>
                 <h3>4</h3>
-              </div>
-              <div>
-                <h3>5</h3>
-              </div>
-              <div>
-                <h3>6</h3>
               </div>
             </Slider>
           </div>

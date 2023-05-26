@@ -200,8 +200,11 @@
   display: flex;
 }
 
-.mint-content640 {
+.mint-content768 {
   display: none;
+}
+
+.slick-dots {
 }
 
 .lavender {
@@ -218,16 +221,22 @@
   .mint {
     margin-bottom: 1.5rem;
   }
+}
 
+@media (max-width: 768px) {
   .previous_draws {
     display: none;
+  }
+
+  .mint {
+    position: relative;
   }
 
   .mint-content {
     display: none;
   }
 
-  .mint-content640 {
+  .mint-content768 {
     display: inherit;
   }
 }

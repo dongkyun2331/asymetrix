@@ -59,6 +59,35 @@
   margin-right: 12px;
 }
 
+.previous_draws768 {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 24px;
+  padding: 12px 16px;
+  margin: 120px 0 0 0;
+  transition: 0.5s;
+  background-color: #fff;
+  border-radius: 1rem;
+}
+
+.previous_draws768:hover {
+  background-color: rgba(34, 34, 34, 0.1);
+  border-radius: 10px;
+}
+
+.previous_draws768:hover .previous_draws768-svg {
+  will-change: transform;
+  animation: heartBeat 1s linear infinite;
+}
+
+.previous_draws768-svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 12px;
+}
+
 .mint-content {
   display: grid;
   grid-template-rows: repeat(2, 1fr);

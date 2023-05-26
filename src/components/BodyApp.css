@@ -207,22 +207,34 @@
 .test-css {
   position: absolute;
   right: 0;
-  top: 0;
+  top: -55px;
 }
 
 .test-css li {
   display: inline-block;
-  width: 20px;
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+  border: 1px solid #000;
+  position: relative;
   cursor: pointer;
+  margin: 4px;
 }
 
 .test-css li button {
   cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
   font-size: 0;
-  width: 10px;
-  height: 10px;
-  border-radius: 10px;
-  background-color: #fff;
+}
+
+.slick-active button {
+  background-color: #000;
+  box-shadow: 0 0 0 1.5px #000;
 }
 
 .lavender {

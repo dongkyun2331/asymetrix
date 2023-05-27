@@ -31,13 +31,17 @@ export default function Header() {
     const rewards = document.querySelector(".rewards");
     const footerA = document.querySelectorAll(".footer-a");
     const previousDrawsPath = document.querySelectorAll(
-      ".previous_draws-svg > path"
+      "div > .previous_draws-svg > path"
+    );
+    const h3previousDrawsPath = document.querySelectorAll(
+      ".previous_draws > .previous_draws-svg > path"
     );
     const previousDrawsElement = document.querySelector(".previous_draws");
     previousDrawsElement.addEventListener("mouseover", function () {
       this.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
     });
     const initialDistribution = document.querySelector(".initial_distribution");
+    const claimTokens = document.querySelector(".claim_tokens > button");
 
     Header.classList.toggle("b222");
     body.classList.toggle("b222");
@@ -52,12 +56,16 @@ export default function Header() {
       element.classList.toggle("cfff");
     });
     previousDrawsPath.forEach((path) => {
+      path.style.fill = "#ffffff80";
+    });
+    h3previousDrawsPath.forEach((path) => {
       path.style.fill = "#fff";
     });
     previousDrawsElement.addEventListener("mouseout", function () {
       this.style.backgroundColor = "";
     });
     initialDistribution.classList.toggle("border-top1px222");
+    claimTokens.classList.toggle("claim_tokens-darkmode");
 
     if (c222Color === "#fff") {
       setc222Color("#222");

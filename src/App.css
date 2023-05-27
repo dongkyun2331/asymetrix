@@ -47,3 +47,8 @@ button {
 .border-top1px222 {
   border-top: 1px solid #222 !important;
 }
+
+.claim_tokens-darkmode {
+  background-color: #222 !important;
+  color: #ffffff80 !important;
+}

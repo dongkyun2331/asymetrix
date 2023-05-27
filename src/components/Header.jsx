@@ -28,6 +28,7 @@ export default function Header() {
     const toggle = document.querySelector(".toggle");
     const connectWallet = document.querySelector(".connect_wallet");
     const mint = document.querySelector(".mint");
+    const footerA = document.querySelectorAll(".footer-a");
 
     Header.classList.toggle("b222");
     body.classList.toggle("b222");
@@ -36,6 +37,10 @@ export default function Header() {
     toggle.classList.toggle("cfff");
     connectWallet.classList.toggle("cfff");
     mint.classList.toggle("b3a4c4a");
+    footerA.forEach((element) => {
+      element.classList.toggle("cfff");
+    });
+
     if (c222Color === "#fff") {
       setc222Color("#222");
     } else {

@@ -306,7 +306,7 @@ export default function BodyApp() {
             <p>stETH</p>
           </div>
           <hr className="hr" />
-          <div>
+          <div className="draw_winning_odds">
             <h4>DRAW WINNING ODDS</h4>
             <p>1</p>
           </div>

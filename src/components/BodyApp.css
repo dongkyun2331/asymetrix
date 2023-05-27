@@ -311,6 +311,24 @@
   border-top: 1px solid #fff;
 }
 
+.draw_winning_odds {
+  padding: 20px;
+  text-align: center;
+}
+
+.draw_winning_odds > h4 {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #222;
+  font-weight: 500;
+}
+
+.draw_winning_odds > p {
+  font-size: 20px;
+  color: #222;
+  font-weight: 400;
+}
+
 @media (max-width: 640px) {
   .section {
     display: block;

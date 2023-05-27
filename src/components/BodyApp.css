@@ -224,6 +224,7 @@
   border-radius: 10px;
   padding: 16px;
   margin-top: 32px;
+  color: #000;
 }
 
 .claim_tokens > button > div {

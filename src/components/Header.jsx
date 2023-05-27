@@ -33,6 +33,11 @@ export default function Header() {
     const previousDrawsPath = document.querySelectorAll(
       ".previous_draws-svg > path"
     );
+    const previousDrawsElement = document.querySelector(".previous_draws");
+    previousDrawsElement.addEventListener("mouseover", function () {
+      this.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+    });
+    const initialDistribution = document.querySelector(".initial_distribution");
 
     Header.classList.toggle("b222");
     body.classList.toggle("b222");
@@ -49,6 +54,10 @@ export default function Header() {
     previousDrawsPath.forEach((path) => {
       path.style.fill = "#fff";
     });
+    previousDrawsElement.addEventListener("mouseout", function () {
+      this.style.backgroundColor = "";
+    });
+    initialDistribution.classList.toggle("border-top1px222");
 
     if (c222Color === "#fff") {
       setc222Color("#222");

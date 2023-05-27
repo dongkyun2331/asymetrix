@@ -300,7 +300,7 @@ export default function BodyApp() {
         </div>
         <div className="lavender">
           <h3>MY BALANCE</h3>
-          <div>
+          <div className="in_protocol">
             <h4>IN PROTOCOL</h4>
             <span>0.000000</span>
             <p>stETH</p>

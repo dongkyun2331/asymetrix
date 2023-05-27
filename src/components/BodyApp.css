@@ -280,6 +280,36 @@
   font-weight: 500;
 }
 
+.in_protocol {
+  padding: 20px;
+  text-align: center;
+}
+
+.in_protocol > h4 {
+  font-size: 14px;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #222;
+}
+
+.in_protocol > span {
+  font-size: 28px;
+  font-weight: 400;
+  color: #222;
+}
+
+.in_protocol > p {
+  font-size: 10px;
+  margin-top: 4px;
+  color: #222;
+  font-weight: 500;
+}
+
+hr {
+  margin: 24px 0;
+  color: #fff;
+}
+
 @media (max-width: 640px) {
   .section {
     display: block;

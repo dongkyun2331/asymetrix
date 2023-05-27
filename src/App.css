@@ -33,7 +33,7 @@ button {
 }
 
 .b222 {
-  background-color: #222;
+  background-color: #222 !important;
 }
 
 .cfff {
@@ -42,4 +42,8 @@ button {
 
 .b3a4c4a {
   background-color: #3a4c4a !important;
+}
+
+.ffff {
+  fill: #fff;
 }

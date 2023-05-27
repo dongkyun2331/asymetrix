@@ -28,7 +28,11 @@ export default function Header() {
     const toggle = document.querySelector(".toggle");
     const connectWallet = document.querySelector(".connect_wallet");
     const mint = document.querySelector(".mint");
+    const rewards = document.querySelector(".rewards");
     const footerA = document.querySelectorAll(".footer-a");
+    const previousDrawsPath = document.querySelectorAll(
+      ".previous_draws-svg > path"
+    );
 
     Header.classList.toggle("b222");
     body.classList.toggle("b222");
@@ -37,8 +41,13 @@ export default function Header() {
     toggle.classList.toggle("cfff");
     connectWallet.classList.toggle("cfff");
     mint.classList.toggle("b3a4c4a");
+    mint.classList.toggle("cfff");
+    rewards.classList.toggle("b222");
     footerA.forEach((element) => {
       element.classList.toggle("cfff");
+    });
+    previousDrawsPath.forEach((path) => {
+      path.style.fill = "#fff";
     });
 
     if (c222Color === "#fff") {

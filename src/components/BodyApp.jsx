@@ -305,7 +305,7 @@ export default function BodyApp() {
             <span>0.000000</span>
             <p>stETH</p>
           </div>
-          <hr />
+          <hr className="hr" />
           <div>
             <h4>DRAW WINNING ODDS</h4>
             <p>1</p>

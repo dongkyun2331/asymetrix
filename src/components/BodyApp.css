@@ -305,9 +305,10 @@
   font-weight: 500;
 }
 
-hr {
+.hr {
   margin: 24px 0;
-  color: #fff;
+  border: none;
+  border-top: 1px solid #fff;
 }
 
 @media (max-width: 640px) {

@@ -27,6 +27,7 @@ export default function Header() {
     const app = document.querySelector(".app");
     const toggle = document.querySelector(".toggle");
     const connectWallet = document.querySelector(".connect_wallet");
+    const mint = document.querySelector(".mint");
 
     Header.classList.toggle("b222");
     body.classList.toggle("b222");
@@ -34,6 +35,7 @@ export default function Header() {
     app.classList.toggle("cfff");
     toggle.classList.toggle("cfff");
     connectWallet.classList.toggle("cfff");
+    mint.classList.toggle("b3a4c4a");
     if (c222Color === "#fff") {
       setc222Color("#222");
     } else {

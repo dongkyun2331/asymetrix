@@ -56,10 +56,10 @@ export default function Header() {
       element.classList.toggle("cfff");
     });
     previousDrawsPath.forEach((path) => {
-      path.style.fill = "#ffffff80";
+      path.classList.toggle("ffff80");
     });
     h3previousDrawsPath.forEach((path) => {
-      path.style.fill = "#fff";
+      path.classList.toggle("ffff");
     });
     previousDrawsElement.addEventListener("mouseout", function () {
       this.style.backgroundColor = "";

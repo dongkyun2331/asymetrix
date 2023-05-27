@@ -274,6 +274,12 @@
   background-color: #e3ecfb;
 }
 
+.lavender > h3 {
+  color: #222;
+  font-size: 20px;
+  font-weight: 500;
+}
+
 @media (max-width: 640px) {
   .section {
     display: block;

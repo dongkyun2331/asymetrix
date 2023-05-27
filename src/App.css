@@ -52,3 +52,11 @@ button {
   background-color: #222 !important;
   color: #ffffff80 !important;
 }
+
+.ffff80 {
+  fill: #ffffff80;
+}
+
+.ffff {
+  fill: #fff;
+}

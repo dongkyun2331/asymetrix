@@ -370,6 +370,11 @@ export default function BodyApp() {
           </div>
         </div>
       </section>
+      <section className="section2">
+        <div className="statistic">
+          <h3>STATISTIC</h3>
+        </div>
+      </section>
     </div>
   );
 }

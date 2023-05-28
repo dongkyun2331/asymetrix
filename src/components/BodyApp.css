@@ -354,6 +354,22 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0;
 }
 
+.max {
+  font-size: 12px;
+  margin-top: 12px;
+  font-weight: 500;
+  color: #808080;
+  position: absolute;
+  bottom: 2rem;
+  left: 1rem;
+}
+
+.max_number {
+  color: #222;
+  padding: 0 4px;
+  font-size: 12px;
+}
+
 @media (max-width: 640px) {
   .section {
     display: block;

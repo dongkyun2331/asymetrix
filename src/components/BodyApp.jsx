@@ -333,6 +333,13 @@ export default function BodyApp() {
               onChange={handleInputChange}
             />
             <span style={labelStyle}>stETH</span>
+            <article className="max">
+              BALANCE stETH
+              <button>
+                <span className="max_number">0.000</span>
+                <span>MAX</span>
+              </button>
+            </article>
           </div>
           <div>
             <button></button>

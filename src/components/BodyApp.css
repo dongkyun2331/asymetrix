@@ -397,7 +397,6 @@ input[type="number"]::-webkit-outer-spin-button {
 .balance-btns {
   margin-top: 1rem;
   gap: 0.5rem;
-  display: flex;
 }
 
 .balance-btns > button {
@@ -433,6 +432,12 @@ input[type="number"]::-webkit-outer-spin-button {
 
   .mint {
     margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .balance-btns {
+    display: flex;
   }
 }
 
@@ -498,6 +503,10 @@ input[type="number"]::-webkit-outer-spin-button {
     text-align: center;
     position: absolute;
     bottom: 0;
+  }
+
+  .balance-btns > button {
+    margin-bottom: 8px;
   }
 }
 

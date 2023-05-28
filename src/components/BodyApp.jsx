@@ -373,6 +373,18 @@ export default function BodyApp() {
       <section className="section2">
         <div className="statistic">
           <h3>STATISTIC</h3>
+          <div className="white-divs">
+            <div className="white-div">
+              <div className="white-title">
+                <h4>TOTAL LOCKED AT PROTOCOL</h4>
+                <div className="white-text">
+                  <span>7093.358985</span>
+                  "stETH"
+                </div>
+              </div>
+            </div>
+            <div className="white-div"></div>
+          </div>
         </div>
       </section>
     </div>

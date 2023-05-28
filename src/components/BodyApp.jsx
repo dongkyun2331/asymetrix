@@ -310,13 +310,10 @@ export default function BodyApp() {
             <h4>DRAW WINNING ODDS</h4>
             <p>1</p>
           </div>
-          <input
-            min="0"
-            max="0"
-            type="text"
-            placeholder="0"
-            className="steth"
-          />
+          <div className="balance">
+            <input min="0" max="0" type="text" placeholder="0" />
+            <span>stETH</span>
+          </div>
           <div>
             <button></button>
             <button></button>

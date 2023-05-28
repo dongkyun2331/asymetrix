@@ -329,14 +329,31 @@
   font-weight: 400;
 }
 
-.steth {
+.balance {
+  position: relative;
+  color: #808080;
+}
+
+.balance > input {
   padding: 16px 56px 64px 16px;
   border: 2px solid #fff;
   border-radius: 16px;
   overflow-x: hidden;
   width: 100%;
   font-size: 24px;
-  color: #808080;
+}
+
+.balance > input:focus {
+  outline: none;
+  border: 2px solid #0038ff;
+}
+
+.balance > span {
+  position: absolute;
+  top: 22px;
+  left: 40px;
+  font-weight: 400;
+  font-size: 16px;
 }
 
 @media (max-width: 640px) {

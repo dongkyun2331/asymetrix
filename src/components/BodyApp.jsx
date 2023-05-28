@@ -382,6 +382,7 @@ export default function BodyApp() {
                   "stETH"
                 </div>
               </div>
+              <div className="chart"></div>
             </div>
             <div className="white-div"></div>
           </div>

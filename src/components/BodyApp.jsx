@@ -349,7 +349,9 @@ export default function BodyApp() {
             </article>
           </div>
           <div>
-            <button></button>
+            <button>
+              <svg></svg>
+            </button>
             <button></button>
           </div>
         </div>

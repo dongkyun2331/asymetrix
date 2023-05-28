@@ -380,6 +380,20 @@ input[type="number"]::-webkit-outer-spin-button {
   border-bottom: 1px dashed;
 }
 
+.convert {
+  font-size: 12px;
+  margin-top: 12px;
+  font-weight: 500;
+  color: #808080;
+  position: absolute;
+  bottom: 0.75rem;
+  left: 1rem;
+}
+
+.convert > button {
+  cursor: pointer;
+}
+
 @media (max-width: 640px) {
   .section {
     display: block;

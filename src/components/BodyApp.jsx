@@ -343,8 +343,8 @@ export default function BodyApp() {
             <article className="convert">
               BALANCE ETH
               <button>
-                <span></span>
-                <span></span>
+                <span className="max_number">0.000</span>
+                <span className="max_text">CONVERT</span>
               </button>
             </article>
           </div>

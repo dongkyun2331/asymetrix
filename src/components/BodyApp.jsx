@@ -9,6 +9,7 @@ export default function BodyApp() {
   const [number, setNumber] = useState(0);
   const [rewards, setRewards] = useState([0, 0, 0]);
   const [remainingTime, setRemainingTime] = useState(null);
+  const [inputValue, setInputValue] = useState("");
 
   useEffect(() => {
     const targetNumber = 4.450077;
@@ -110,6 +111,18 @@ export default function BodyApp() {
     nextArrow: <></>,
     slidesToShow: 1,
     slidesToScroll: 1,
+  };
+
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
+  };
+
+  const labelStyle = {
+    position: "absolute",
+    top: "22px",
+    left: inputValue.length > 0 ? `${40 + inputValue.length * 12}px` : "40px",
+    fontWeight: "400",
+    fontSize: "16px",
   };
 
   return (
@@ -311,8 +324,15 @@ export default function BodyApp() {
             <p>1</p>
           </div>
           <div className="balance">
-            <input min="0" max="0" type="text" placeholder="0" />
-            <span>stETH</span>
+            <input
+              min="0"
+              max="0"
+              type="number"
+              placeholder="0"
+              value={inputValue}
+              onChange={handleInputChange}
+            />
+            <span style={labelStyle}>stETH</span>
           </div>
           <div>
             <button></button>

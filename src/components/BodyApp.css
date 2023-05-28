@@ -439,14 +439,20 @@ input[type="number"]::-webkit-outer-spin-button {
   margin-bottom: 32px;
 }
 
+.white-divs {
+  gap: 0.75rem;
+}
+
 .white-div {
   padding: 24px;
   background-color: #fff;
   border-radius: 1rem;
   overflow: hidden;
+  margin-bottom: 12px;
 }
 
-.white-title > h4 {
+.white-title > h4,
+.white-div > h4 {
   margin-bottom: 8px;
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -590,6 +596,5 @@ input[type="number"]::-webkit-outer-spin-button {
   .white-divs {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.75rem;
   }
 }

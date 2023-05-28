@@ -384,7 +384,9 @@ export default function BodyApp() {
               </div>
               <div className="chart"></div>
             </div>
-            <div className="white-div"></div>
+            <div className="white-div">
+              <h4>TOP REWARDS WITH LOW ODDS</h4>
+            </div>
           </div>
         </div>
       </section>

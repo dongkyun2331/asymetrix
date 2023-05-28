@@ -337,7 +337,7 @@ export default function BodyApp() {
               BALANCE stETH
               <button>
                 <span className="max_number">0.000</span>
-                <span>MAX</span>
+                <span className="max_text">MAX</span>
               </button>
             </article>
           </div>

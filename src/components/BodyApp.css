@@ -364,10 +364,20 @@ input[type="number"]::-webkit-outer-spin-button {
   left: 1rem;
 }
 
+.max > button {
+  cursor: pointer;
+}
+
 .max_number {
   color: #222;
   padding: 0 4px;
   font-size: 12px;
+}
+
+.max_text {
+  color: #808080;
+  font-size: 12px;
+  border-bottom: 1px dashed;
 }
 
 @media (max-width: 640px) {

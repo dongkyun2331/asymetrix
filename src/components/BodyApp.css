@@ -407,10 +407,11 @@ input[type="number"]::-webkit-outer-spin-button {
   line-height: 1.25rem;
   height: 3rem;
   width: 100%;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #2222221a;
 }
 
 .balance-btns > button > svg {
@@ -419,7 +420,10 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .deposit {
   color: #fff;
-  background-color: #2222221a;
+}
+
+.withdraw {
+  color: #222;
 }
 
 @media (max-width: 640px) {

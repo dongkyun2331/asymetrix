@@ -348,11 +348,17 @@ export default function BodyApp() {
               </button>
             </article>
           </div>
-          <div>
-            <button>
-              <svg></svg>
+          <div className="balance-btns">
+            <button className="deposit">
+              <svg width="16" height="16" viewBox="0 0 16 16">
+                <path
+                  d="M12.3 6.7L8.5 2.9V15H7.5V2.9L3.7 6.7L3 6L8 1L13 6L12.3 6.7Z"
+                  fill="#fff"
+                ></path>
+              </svg>
+              DEPOSIT
             </button>
-            <button></button>
+            <button className="withdraw"></button>
           </div>
         </div>
       </section>

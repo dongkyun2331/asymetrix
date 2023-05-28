@@ -394,6 +394,34 @@ input[type="number"]::-webkit-outer-spin-button {
   cursor: pointer;
 }
 
+.balance-btns {
+  margin-top: 1rem;
+  gap: 0.5rem;
+  display: flex;
+}
+
+.balance-btns > button {
+  font-size: 0.875rem;
+  padding: 0 1rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  height: 3rem;
+  width: 100%;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.balance-btns > button > svg {
+  margin-right: 12px;
+}
+
+.deposit {
+  color: #fff;
+  background-color: #2222221a;
+}
+
 @media (max-width: 640px) {
   .section {
     display: block;

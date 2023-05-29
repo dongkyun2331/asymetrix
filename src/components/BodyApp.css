@@ -560,6 +560,10 @@ input[type="number"]::-webkit-outer-spin-button {
   .three-div > div {
     margin-bottom: 20px;
   }
+
+  .mb56 {
+    margin-bottom: 56px;
+  }
 }
 
 @media (min-width: 768px) {

@@ -413,6 +413,13 @@ input[type="number"]::-webkit-outer-spin-button {
   color: #fff;
 }
 
+.deposit:active,
+.withdraw:active {
+  top: 1px;
+  border-color: rgba(0, 0, 0, 0.34) rgba(0, 0, 0, 0.21) rgba(0, 0, 0, 0.21);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.89), 0 1px rgba(0, 0, 0, 0.05) inset;
+}
+
 .withdraw {
   color: #222;
 }

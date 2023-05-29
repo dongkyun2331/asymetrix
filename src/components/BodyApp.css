@@ -465,10 +465,16 @@ input[type="number"]::-webkit-outer-spin-button {
   letter-spacing: 0.02em;
 }
 
+.chart {
+  background: repeating-linear-gradient(#00000026, #fff 1px, #fff 17px);
+  width: 100%;
+  height: 206px;
+  margin-top: -61px;
+}
+
 .three-div {
   padding-top: 2.25rem;
   padding-bottom: 2.25rem;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
   text-align: center;
   gap: 0.5rem;
   display: grid;
@@ -483,14 +489,34 @@ input[type="number"]::-webkit-outer-spin-button {
   height: 1.25rem;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
 }
 
-.chart {
-  background: repeating-linear-gradient(#00000026, #fff 1px, #fff 17px);
-  width: 100%;
-  height: 206px;
-  margin-top: -61px;
+.address {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.steth {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.steth > a {
+  border-bottom: 1px dashed #222;
+}
+
+.with {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .three-div {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 640px) {
@@ -500,6 +526,14 @@ input[type="number"]::-webkit-outer-spin-button {
 
   .mint {
     margin-bottom: 1.5rem;
+  }
+
+  .three-div {
+    padding: 16px 0;
+  }
+
+  .three-div > div {
+    margin-bottom: 20px;
   }
 }
 

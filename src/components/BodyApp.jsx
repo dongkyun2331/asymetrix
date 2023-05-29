@@ -389,12 +389,28 @@ export default function BodyApp() {
               <div className="three-div">
                 <div>
                   <div className="i">I</div>
-                  <p></p>
-                  <p></p>
-                  <p></p>
+                  <p className="address">0x9C6f...ace1</p>
+                  <p className="steth">
+                    <a href="">0.791163 stETH</a>
+                  </p>
+                  <p className="with">WITH 1 IN 404 ODDS</p>
                 </div>
-                <div></div>
-                <div></div>
+                <div>
+                  <div className="i">II</div>
+                  <p className="address">0xb26B...cC33</p>
+                  <p className="steth">
+                    <a href="">0.326767 stETH</a>
+                  </p>
+                  <p className="with">WITH 1 IN 165 ODDS</p>
+                </div>
+                <div>
+                  <div className="i">III</div>
+                  <p className="address">0x232E...01c2</p>
+                  <p className="steth">
+                    <a href="">1.318605 stETH</a>
+                  </p>
+                  <p className="with">WITH 1 IN 97.93 ODDS</p>
+                </div>
               </div>
             </div>
           </div>

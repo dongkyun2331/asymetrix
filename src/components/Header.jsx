@@ -42,6 +42,7 @@ export default function Header() {
     });
     const initialDistribution = document.querySelector(".initial_distribution");
     const claimTokens = document.querySelector(".claim_tokens > button");
+    const lavender = document.querySelector(".lavender");
 
     Header.classList.toggle("b222");
     body.classList.toggle("b222");
@@ -66,6 +67,8 @@ export default function Header() {
     });
     initialDistribution.classList.toggle("border-top1px222");
     claimTokens.classList.toggle("claim_tokens-darkmode");
+    lavender.classList.toggle("cfff");
+    lavender.classList.toggle("b444a55");
 
     if (c222Color === "#fff") {
       setc222Color("#222");

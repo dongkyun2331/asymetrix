@@ -60,6 +60,13 @@ export default function Header() {
     const stethA = document.querySelectorAll(".steth > a");
     const With = document.querySelectorAll(".with");
     const iconsSvg = document.querySelectorAll(".icons > div > svg > path");
+    const connectWalletModal = document.querySelector(".connect_wallet-modal");
+    const connectWalletModalBtns = document.querySelectorAll(
+      ".connect_wallet-modal-btns > button"
+    );
+    const connectWalletClose = document.querySelectorAll(
+      ".connect_wallet-close > svg > path"
+    );
 
     Header.classList.toggle("b222");
     body.classList.toggle("b222");
@@ -117,6 +124,14 @@ export default function Header() {
     });
     iconsSvg.forEach((path) => {
       path.classList.toggle("ffff");
+    });
+    connectWalletModal.classList.toggle("cfff");
+    connectWalletModal.classList.toggle("b222");
+    connectWalletModalBtns.forEach((path) => {
+      path.classList.toggle("cfff");
+    });
+    connectWalletClose.forEach((path) => {
+      path.classList.toggle("sfff80");
     });
 
     if (c222Color === "#fff") {

@@ -177,6 +177,12 @@ export default function BodyApp() {
     fontSize: "16px",
   };
 
+  const handleConvertClick = () => {
+    const convertModal = document.querySelector(".convert-modal");
+
+    convertModal.classList.toggle("modal-on");
+  };
+
   return (
     <div className="bodyapp">
       <section className="section">
@@ -394,7 +400,7 @@ export default function BodyApp() {
             </article>
             <article className="convert">
               BALANCE ETH
-              <button>
+              <button onClick={handleConvertClick}>
                 <span className="max_number">0.000</span>
                 <span className="max_text">CONVERT</span>
               </button>
@@ -516,6 +522,17 @@ export default function BodyApp() {
           </div>
         </div>
       </section>
+      <div className="convert-modal">
+        <h2>CONVERT ETH TO stETH</h2>
+        <span>
+          Asymetrix uses staked ETH (stETH) for deposits. You can easily convert
+          your ETH to stETH (1:1 ratio) and make a deposit.
+        </span>
+        <div className="relative mb-2">
+          <input type="number" min={0} max={1} placeholder="0" />
+          <span>ETH</span>
+        </div>
+      </div>
     </div>
   );
 }

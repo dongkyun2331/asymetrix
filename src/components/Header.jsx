@@ -46,6 +46,14 @@ export default function Header() {
     const inProtocol = document.querySelector(".in_protocol");
     const hr = document.querySelector(".hr");
     const drawWinningOdds = document.querySelector(".draw_winning_odds");
+    const balanceInput = document.querySelector(".balance > input");
+    const maxNumber = document.querySelectorAll(".max_number");
+    const deposit = document.querySelector(".deposit");
+    const balanceBtnsPath = document.querySelectorAll(
+      ".balance-btns > button > svg > path"
+    );
+    const withdraw = document.querySelector(".withdraw");
+    const statistic = document.querySelector(".statistic");
 
     Header.classList.toggle("b222");
     body.classList.toggle("b222");
@@ -75,6 +83,18 @@ export default function Header() {
     inProtocol.classList.toggle("cfff");
     hr.classList.toggle("border-top1px222");
     drawWinningOdds.classList.toggle("cfff");
+    balanceInput.classList.toggle("b222");
+    balanceInput.classList.toggle("border1px222");
+    maxNumber.forEach((path) => {
+      path.classList.toggle("cfff");
+    });
+    deposit.classList.toggle("b00114f");
+    balanceBtnsPath.forEach((path) => {
+      path.classList.toggle("ffff80");
+    });
+    withdraw.classList.toggle("b222");
+    withdraw.classList.toggle("cfff");
+    statistic.classList.toggle("bf5f5f533");
 
     if (c222Color === "#fff") {
       setc222Color("#222");

@@ -8,6 +8,8 @@ import "slick-carousel/slick/slick-theme.css";
 export default function BodyApp() {
   const [number, setNumber] = useState(0);
   const [rewards, setRewards] = useState([0, 0, 0]);
+  const [locked, setLocked] = useState(0);
+  const [statistic, setStatistic] = useState([0, 0, 0]);
   const [remainingTime, setRemainingTime] = useState(null);
   const [inputValue, setInputValue] = useState("");
 
@@ -24,6 +26,25 @@ export default function BodyApp() {
           return targetNumber;
         }
         return newNumber;
+      });
+    }, 10);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  useEffect(() => {
+    const targetLocked = 7093.358985;
+    const duration = 2000;
+    const increment = ((targetLocked - locked) / duration) * 10;
+
+    const timer = setInterval(() => {
+      setLocked((prevLocked) => {
+        const newLocked = prevLocked + increment;
+        if (newLocked >= targetLocked) {
+          clearInterval(timer);
+          return targetLocked;
+        }
+        return newLocked;
       });
     }, 10);
 
@@ -50,6 +71,37 @@ export default function BodyApp() {
           }
 
           return newRewards;
+        });
+      }, 10);
+
+      timers.push(timer);
+    }
+
+    return () => {
+      timers.forEach((timer) => clearInterval(timer));
+    };
+  }, []);
+
+  useEffect(() => {
+    const targetStatistic = [219, 32.607927, 24];
+    const duration = 2000;
+    const increment = targetStatistic.map(
+      (target, index) => ((target - statistic[index]) / duration) * 10
+    );
+    const timers = [];
+
+    for (let i = 0; i < targetStatistic.length; i++) {
+      const timer = setInterval(() => {
+        setStatistic((prevStatistic) => {
+          const newStatistic = [...prevStatistic];
+          newStatistic[i] += increment[i];
+
+          if (newStatistic[i] >= targetStatistic[i]) {
+            clearInterval(timer);
+            newStatistic[i] = targetStatistic[i];
+          }
+
+          return newStatistic;
         });
       }, 10);
 
@@ -378,7 +430,7 @@ export default function BodyApp() {
               <div className="white-title">
                 <h4>TOTAL LOCKED AT PROTOCOL</h4>
                 <div className="white-text">
-                  <span>7093.358985</span>
+                  <span>{locked.toFixed(6)}</span>
                   "stETH"
                 </div>
               </div>
@@ -424,7 +476,7 @@ export default function BodyApp() {
               </svg>
               <p className="text-sm">UNIQUE USERS</p>
               <div className="text-xl">
-                <span>219</span>
+                <span>{statistic[0].toFixed(0)}</span>
               </div>
             </div>
             <div className="mb56">
@@ -440,7 +492,7 @@ export default function BodyApp() {
               </svg>
               <p className="text-sm">AVERAGE DEPOSIT</p>
               <div className="text-xl">
-                <span>32.607927</span>
+                <span>{statistic[1].toFixed(6)}</span>
               </div>
               <p className="text10px">stETH</p>
             </div>
@@ -457,7 +509,7 @@ export default function BodyApp() {
               </svg>
               <p className="text-sm">AVERAGE TIME IN APP</p>
               <div className="text-xl">
-                <span>24</span>
+                <span>{statistic[2].toFixed(0)}</span>
                 "days"
               </div>
             </div>

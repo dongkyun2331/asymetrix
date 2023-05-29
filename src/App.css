@@ -74,5 +74,25 @@ button {
 }
 
 .bf5f5f533 {
-  background-color: #f5f5f533;
+  background-color: #f5f5f533 !important;
+}
+
+.b2222224d {
+  background-color: #2222224d !important;
+}
+
+.chart-darkmode {
+  background: repeating-linear-gradient(
+    rgba(0, 0, 0, 0.3),
+    #3f3f3f 1px,
+    #3f3f3f 17px
+  ) !important;
+}
+
+.border-fff {
+  border-color: #fff !important ;
+}
+
+.cfff80 {
+  color: #ffffff80 !important;
 }

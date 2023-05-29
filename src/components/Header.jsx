@@ -54,6 +54,12 @@ export default function Header() {
     );
     const withdraw = document.querySelector(".withdraw");
     const statistic = document.querySelector(".statistic");
+    const whiteDiv = document.querySelectorAll(".white-div");
+    const chart = document.querySelector(".chart");
+    const i = document.querySelectorAll(".i");
+    const stethA = document.querySelectorAll(".steth > a");
+    const With = document.querySelectorAll(".with");
+    const iconsSvg = document.querySelectorAll(".icons > div > svg > path");
 
     Header.classList.toggle("b222");
     body.classList.toggle("b222");
@@ -95,6 +101,23 @@ export default function Header() {
     withdraw.classList.toggle("b222");
     withdraw.classList.toggle("cfff");
     statistic.classList.toggle("bf5f5f533");
+    statistic.classList.toggle("cfff");
+    whiteDiv.forEach((path) => {
+      path.classList.toggle("b2222224d");
+    });
+    chart.classList.toggle("chart-darkmode");
+    i.forEach((path) => {
+      path.classList.toggle("border-fff");
+    });
+    stethA.forEach((path) => {
+      path.classList.toggle("border-fff");
+    });
+    With.forEach((path) => {
+      path.classList.toggle("cfff80");
+    });
+    iconsSvg.forEach((path) => {
+      path.classList.toggle("ffff");
+    });
 
     if (c222Color === "#fff") {
       setc222Color("#222");

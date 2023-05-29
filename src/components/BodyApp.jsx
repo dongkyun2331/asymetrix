@@ -386,6 +386,16 @@ export default function BodyApp() {
             </div>
             <div className="white-div">
               <h4>TOP REWARDS WITH LOW ODDS</h4>
+              <div className="three-div">
+                <div>
+                  <div className="i">I</div>
+                  <p></p>
+                  <p></p>
+                  <p></p>
+                </div>
+                <div></div>
+                <div></div>
+              </div>
             </div>
           </div>
         </div>

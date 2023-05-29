@@ -313,13 +313,11 @@
 .draw_winning_odds > h4 {
   font-size: 14px;
   margin-bottom: 8px;
-  color: #222;
   font-weight: 500;
 }
 
 .draw_winning_odds > p {
   font-size: 20px;
-  color: #222;
   font-weight: 400;
 }
 

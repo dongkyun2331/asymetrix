@@ -45,6 +45,7 @@ export default function Header() {
     const lavender = document.querySelector(".lavender");
     const inProtocol = document.querySelector(".in_protocol");
     const hr = document.querySelector(".hr");
+    const drawWinningOdds = document.querySelector(".draw_winning_odds");
 
     Header.classList.toggle("b222");
     body.classList.toggle("b222");
@@ -73,6 +74,7 @@ export default function Header() {
     lavender.classList.toggle("b444a55");
     inProtocol.classList.toggle("cfff");
     hr.classList.toggle("border-top1px222");
+    drawWinningOdds.classList.toggle("cfff");
 
     if (c222Color === "#fff") {
       setc222Color("#222");

@@ -562,6 +562,32 @@ export default function BodyApp() {
           "* please make sure not to convert your entire eth balance. set aside
           enough to cover ethereum network fees (gas)."
         </span>
+        <div className="convert-btns">
+          <button className="cancel-btn">
+            <svg width={16} height={16} viewBox="0 0 36 36">
+              <path
+                d="M6 29.5L29 6.5"
+                stroke="#2222224d"
+                strokeWidth={3}
+              ></path>
+              <path
+                d="M29 29.5L6 6.5"
+                stroke="#2222224d"
+                strokeWidth={3}
+              ></path>
+            </svg>
+            <span>CANCEL</span>
+          </button>
+          <button className="convert-btn">
+            <svg width={16} height={16} viewBox="0 0 16 16">
+              <path
+                d="M5.705 13.295L3.915 11.5H14V10.5H3.915L5.705 8.705L5 8L2 11L5 14L5.705 13.295ZM14 5L11 2L10.295 2.705L12.085 4.5H2V5.5H12.085L10.295 7.295L11 8L14 5Z"
+                fill="white"
+              ></path>
+            </svg>
+            <span>CONVERT</span>
+          </button>
+        </div>
       </div>
       <div className="convert-dimm" onClick={handleConvertClick}></div>
     </div>

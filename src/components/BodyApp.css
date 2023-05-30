@@ -630,6 +630,39 @@ input[type="number"]::-webkit-outer-spin-button {
   font-size: 12px;
 }
 
+.convert-btns {
+  margin-top: 40px;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  display: flex;
+}
+
+.convert-btns > button {
+  height: 3.5rem;
+  transition-duration: 0.5s;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  padding: 1rem 1rem;
+  border-radius: 0.5rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cancel-btn {
+  color: rgba(34, 34, 34, 0.3);
+  background-color: rgba(244, 244, 244, 1);
+}
+
+.convert-btns > button > span {
+  margin-left: 8px;
+}
+
+.convert-btn {
+  background-color: #2222221a;
+  color: #fff;
+}
+
 @media (min-width: 640px) {
   .three-div {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -665,6 +698,10 @@ input[type="number"]::-webkit-outer-spin-button {
 @media (min-width: 768px) {
   .balance-btns {
     display: flex;
+  }
+
+  .convert-btns > button {
+    height: 3rem;
   }
 }
 

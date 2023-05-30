@@ -606,6 +606,22 @@ input[type="number"]::-webkit-outer-spin-button {
   color: #808080;
 }
 
+.relative > article {
+  font-size: 12px;
+  margin-top: 12px;
+  color: #808080;
+  line-height: 1rem;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.relative > article > button {
+  color: #222;
+  padding: 0 4px;
+  cursor: pointer;
+}
+
 @media (min-width: 640px) {
   .three-div {
     grid-template-columns: repeat(3, minmax(0, 1fr));

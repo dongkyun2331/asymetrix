@@ -541,6 +541,12 @@ export default function BodyApp() {
         <div className="relative mb-2">
           <input type="number" min={0} max={1} placeholder="0" />
           <span>ETH</span>
+          <article>
+            "BALANCE ETH"
+            <button>
+              <span>0.000</span>
+            </button>
+          </article>
         </div>
       </div>
       <div className="convert-dimm" onClick={handleConvertClick}></div>

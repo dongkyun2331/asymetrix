@@ -179,8 +179,10 @@ export default function BodyApp() {
 
   const handleConvertClick = () => {
     const convertModal = document.querySelector(".convert-modal");
+    const convertDimm = document.querySelector(".convert-dimm");
 
     convertModal.classList.toggle("modal-on");
+    convertDimm.classList.toggle("modal-on");
   };
 
   return (
@@ -533,6 +535,7 @@ export default function BodyApp() {
           <span>ETH</span>
         </div>
       </div>
+      <div className="convert-dimm" onClick={handleConvertClick}></div>
     </div>
   );
 }

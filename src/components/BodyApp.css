@@ -546,9 +546,24 @@ input[type="number"]::-webkit-outer-spin-button {
   border-radius: 1rem;
   width: 560px;
   max-width: 100%;
+  z-index: 2;
 }
 
 .modal-on {
+  display: inherit;
+}
+
+.convert-dimm {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 1;
+}
+
+.convert-dimm.modal-on {
   display: inherit;
 }
 

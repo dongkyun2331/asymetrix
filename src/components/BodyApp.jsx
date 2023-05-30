@@ -554,6 +554,10 @@ export default function BodyApp() {
             </button>
           </article>
         </div>
+        <span className="uppercase text-808080 text-12px">
+          "* min amount to deposit to the Asymetrix 0.11"
+          <span>stETH</span>
+        </span>
       </div>
       <div className="convert-dimm" onClick={handleConvertClick}></div>
     </div>

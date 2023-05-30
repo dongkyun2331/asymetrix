@@ -618,6 +618,18 @@ input[type="number"]::-webkit-outer-spin-button {
   cursor: pointer;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-808080 {
+  color: #808080;
+}
+
+.text-12px {
+  font-size: 12px;
+}
+
 @media (min-width: 640px) {
   .three-div {
     grid-template-columns: repeat(3, minmax(0, 1fr));

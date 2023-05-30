@@ -558,6 +558,10 @@ export default function BodyApp() {
           "* min amount to deposit to the Asymetrix 0.11"
           <span>stETH</span>
         </span>
+        <span className="uppercase text-808080 text-12px">
+          "* please make sure not to convert your entire eth balance. set aside
+          enough to cover ethereum network fees (gas)."
+        </span>
       </div>
       <div className="convert-dimm" onClick={handleConvertClick}></div>
     </div>

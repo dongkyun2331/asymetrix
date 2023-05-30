@@ -180,9 +180,17 @@ export default function BodyApp() {
   const handleConvertClick = () => {
     const convertModal = document.querySelector(".convert-modal");
     const convertDimm = document.querySelector(".convert-dimm");
+    const Header = document.querySelector(".Header");
+    const section = document.querySelector(".section");
+    const section2 = document.querySelector(".section2");
+    const footer = document.querySelector(".footer");
 
     convertModal.classList.toggle("modal-on");
     convertDimm.classList.toggle("modal-on");
+    Header.classList.toggle("blur");
+    section.classList.toggle("blur");
+    section2.classList.toggle("blur");
+    footer.classList.toggle("blur");
   };
 
   return (

@@ -539,8 +539,14 @@ export default function BodyApp() {
           your ETH to stETH (1:1 ratio) and make a deposit.
         </span>
         <div className="relative mb-2">
-          <input type="number" min={0} max={1} placeholder="0" />
-          <span>ETH</span>
+          <input
+            type="number"
+            min={0}
+            max={1}
+            placeholder="0"
+            onChange={handleInputChange}
+          />
+          <span style={labelStyle}>ETH</span>
           <article>
             "BALANCE ETH"
             <button>

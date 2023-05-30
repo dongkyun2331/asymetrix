@@ -598,11 +598,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .relative > span {
-  position: absolute;
-  left: 40px;
-  top: 45px;
-  font-weight: 400;
-  font-size: 16px;
+  top: 45px !important;
   color: #808080;
 }
 

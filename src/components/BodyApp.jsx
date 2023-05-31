@@ -4,6 +4,7 @@ import moment from "moment";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Chart from "./Chart";
 
 export default function BodyApp() {
   const [number, setNumber] = useState(0);
@@ -450,7 +451,9 @@ export default function BodyApp() {
                   "stETH"
                 </div>
               </div>
-              <div className="chart"></div>
+              <div className="chart">
+                <Chart />
+              </div>
             </div>
             <div className="white-div">
               <h4>TOP REWARDS WITH LOW ODDS</h4>

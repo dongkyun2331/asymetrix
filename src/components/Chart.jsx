@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  LineChart,
-  Line,
-  CartesianGrid,
-  Tooltip,
-  ResponsiveContainer,
-} from "recharts";
+import { LineChart, Line, Tooltip, ResponsiveContainer } from "recharts";
 
 const data = [
   { date: "2023.4.21.", Total: 0.0 },
@@ -21,7 +15,6 @@ const Chart = () => {
         margin={{ top: 20, right: 30, left: 0, bottom: 0 }}
         viewBox="0 0 36 36"
       >
-        <CartesianGrid strokeDasharray="3 3" />
         <Tooltip />
         <Line type="monotone" dataKey="Total" stroke="#222" />
       </LineChart>

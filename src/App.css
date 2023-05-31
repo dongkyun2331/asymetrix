@@ -58,11 +58,11 @@ button {
 }
 
 .ffff80 {
-  fill: #ffffff80;
+  fill: #ffffff80 !important;
 }
 
 .ffff {
-  fill: #fff;
+  fill: #fff !important;
 }
 
 .b444a55 {

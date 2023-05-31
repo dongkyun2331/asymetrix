@@ -40,6 +40,7 @@ export default function Header() {
     previousDrawsElement.addEventListener("mouseover", function () {
       this.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
     });
+    const endsIn = document.querySelector(".ends_in");
     const initialDistribution = document.querySelector(".initial_distribution");
     const claimTokens = document.querySelector(".claim_tokens > button");
     const lavender = document.querySelector(".lavender");
@@ -94,6 +95,7 @@ export default function Header() {
     previousDrawsElement.addEventListener("mouseout", function () {
       this.style.backgroundColor = "";
     });
+    endsIn.classList.toggle("border-top1px222");
     initialDistribution.classList.toggle("border-top1px222");
     claimTokens.classList.toggle("claim_tokens-darkmode");
     lavender.classList.toggle("cfff");

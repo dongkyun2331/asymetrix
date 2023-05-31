@@ -42,6 +42,20 @@ const data = [
   { date: "2023.5.28.", Total: 7093.358985 },
 ];
 
+const CustomTooltip = ({ active, payload }) => {
+  if (active && payload && payload.length) {
+    const dataItem = payload[0].payload;
+    return (
+      <div className="custom-tooltip">
+        <p className="date">{` ${dataItem.date}`}</p>
+        <p className="total">{`Total: ${dataItem.Total}`}</p>
+      </div>
+    );
+  }
+
+  return null;
+};
+
 const Chart = () => {
   return (
     <ResponsiveContainer width="100%" height="100%">
@@ -50,7 +64,7 @@ const Chart = () => {
         margin={{ top: 20, right: 30, left: 0, bottom: 0 }}
         viewBox="0 0 36 36"
       >
-        <Tooltip />
+        <Tooltip content={<CustomTooltip />} />
         <Line type="monotone" dataKey="Total" stroke="#222" dot={false} />
       </LineChart>
     </ResponsiveContainer>

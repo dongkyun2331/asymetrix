@@ -116,3 +116,21 @@ button {
 .sfff {
   stroke: #fff !important;
 }
+
+.custom-tooltip {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.custom-tooltip p {
+  margin: 0;
+}
+
+.custom-tooltip .date {
+  font-weight: bold;
+}
+
+.custom-tooltip .total {
+  margin-top: 5px;
+}

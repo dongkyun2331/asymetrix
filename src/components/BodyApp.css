@@ -639,7 +639,6 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .convert-btns > button {
   height: 3.5rem;
-  transition-duration: 0.5s;
   font-size: 0.875rem;
   line-height: 1.25rem;
   padding: 1rem 1rem;
@@ -652,6 +651,19 @@ input[type="number"]::-webkit-outer-spin-button {
 .cancel-btn {
   color: rgba(34, 34, 34, 0.3);
   background-color: rgba(244, 244, 244, 1);
+}
+
+.cancel-btn:hover {
+  color: #222;
+}
+
+.cancel-btn:hover > svg {
+  will-change: transform;
+  animation: heartBeat 1s linear infinite;
+}
+
+.cancel-btn:hover > svg > path {
+  stroke: #222;
 }
 
 .convert-btns > button > span {

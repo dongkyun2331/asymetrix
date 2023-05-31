@@ -67,6 +67,7 @@ export default function Header() {
     const connectWalletClose = document.querySelectorAll(
       ".connect_wallet-close > svg > path"
     );
+    const convertModal = document.querySelector(".convert-modal");
 
     Header.classList.toggle("b222");
     body.classList.toggle("b222");
@@ -133,6 +134,8 @@ export default function Header() {
     connectWalletClose.forEach((path) => {
       path.classList.toggle("sfff80");
     });
+    convertModal.classList.toggle("b222");
+    convertModal.classList.toggle("cfff");
 
     if (c222Color === "#fff") {
       setc222Color("#222");

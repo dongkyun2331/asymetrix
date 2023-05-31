@@ -654,6 +654,10 @@ input[type="number"]::-webkit-outer-spin-button {
   cursor: pointer;
 }
 
+.cancel-btn > svg > path {
+  stroke: #222;
+}
+
 .cancel-btn:hover {
   color: #222;
 }
@@ -661,10 +665,6 @@ input[type="number"]::-webkit-outer-spin-button {
 .cancel-btn:hover > svg {
   will-change: transform;
   animation: heartBeat 1s linear infinite;
-}
-
-.cancel-btn:hover > svg > path {
-  stroke: #222;
 }
 
 .convert-btns > button > span {

@@ -69,6 +69,9 @@ export default function Header() {
     );
     const convertModal = document.querySelector(".convert-modal");
     const relativeInput = document.querySelector(".relative > input");
+    const cancelSvg = document.querySelectorAll(".cancel-btn > svg > path");
+    const cancelBtn = document.querySelector(".cancel-btn ");
+    const convertBtn = document.querySelector(".convert-btn");
 
     Header.classList.toggle("b222");
     body.classList.toggle("b222");
@@ -138,6 +141,11 @@ export default function Header() {
     convertModal.classList.toggle("b222");
     convertModal.classList.toggle("cfff");
     relativeInput.classList.toggle("b222");
+    cancelSvg.forEach((path) => {
+      path.classList.toggle("s222");
+    });
+    cancelBtn.classList.toggle("c222");
+    convertBtn.classList.toggle("b00114f");
 
     if (c222Color === "#fff") {
       setc222Color("#222");

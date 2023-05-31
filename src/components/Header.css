@@ -301,6 +301,61 @@ header.sticky {
   text-decoration: underline;
 }
 
+.disconnect-modal {
+  padding: 16px;
+  background-color: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 24rem;
+  border-radius: 1rem;
+  width: 100%;
+}
+
+.disconnect-content {
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.disconnect-content > h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.disconnect-content > span {
+  font-size: 16px;
+}
+
+.disconnect-btns {
+  gap: 0.5rem;
+  width: 100%;
+  display: flex;
+  text-align: center;
+}
+
+.disconnect-btns > button {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  border-radius: 0.5rem;
+  display: inline-flex;
+  height: 3.5rem;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.disconnect-cancel {
+  color: #2222224d;
+  background-color: #f4f4f4;
+}
+
+.disconnect-button {
+  color: #fff;
+  background-color: #0038ff;
+}
+
 @keyframes heartBeat {
   0% {
     transform: none;
@@ -465,5 +520,9 @@ header.sticky {
   .connect_wallet-modal {
     width: 420px;
     max-width: 100%;
+  }
+
+  .disconnect-modal {
+    padding: 24px;
   }
 }

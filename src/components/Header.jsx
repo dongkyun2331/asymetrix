@@ -328,6 +328,8 @@ export default function Header() {
     setWalletAddress(result[0]);
   };
 
+  const handleAddressClick = () => {};
+
   return (
     <header className="Header">
       <a className="logo" href="">
@@ -367,9 +369,7 @@ export default function Header() {
         </button>
         {isConnected ? (
           <div className="buttonContainer">
-            <span
-            // onClick={handleAddressClick}
-            >
+            <span onClick={handleAddressClick}>
               {displayWalletAddress} DISCONNECT
             </span>
           </div>
@@ -382,9 +382,7 @@ export default function Header() {
       <div className="width1024">
         {isConnected ? (
           <div className="buttonContainer">
-            <span
-            // onClick={handleAddressClick}
-            >
+            <span onClick={handleAddressClick}>
               {displayWalletAddress} DISCONNECT
             </span>
           </div>
@@ -543,6 +541,16 @@ export default function Header() {
         </div>
       </div>
       <div className="connect-dimm" onClick={handleConnectClick}></div>
+      <div className="disconnect-modal">
+        <div className="disconnect-content">
+          <h2>Disconnect Wallet</h2>
+          <span>Are you sure you want to logout</span>
+        </div>
+        <div className="disconnect-btns">
+          <button className="disconnect-cancel">CANCEL</button>
+          <button className="disconnect-button">DISCONNECT</button>
+        </div>
+      </div>
     </header>
   );
 }

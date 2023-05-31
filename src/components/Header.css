@@ -131,6 +131,20 @@ header.sticky {
   display: none;
 }
 
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  height: 3rem;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.buttonContainer:hover {
+  background-color: #eee;
+  border-radius: 10px;
+}
+
 .bars {
   cursor: pointer;
   padding-left: 8px;
@@ -316,7 +330,7 @@ header.sticky {
   }
 
   .width1024 {
-    display: inherit;
+    display: flex;
   }
 
   .bars:hover {
@@ -367,6 +381,10 @@ header.sticky {
 
   .toggle:hover {
     background-color: #666;
+  }
+
+  .buttonContainer {
+    height: 3.5rem;
   }
 }
 

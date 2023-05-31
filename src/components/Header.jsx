@@ -36,6 +36,10 @@ export default function Header() {
     const app = document.querySelector(".app");
     const toggle = document.querySelector(".toggle");
     const connectWallet = document.querySelectorAll(".connect_wallet");
+    const bars = document.querySelectorAll(".bars > svg > path");
+    const buttonContainer = document.querySelectorAll(
+      ".buttonContainer > span"
+    );
     const mint = document.querySelector(".mint");
     const rewards = document.querySelector(".rewards");
     const footerA = document.querySelectorAll(".footer-a");
@@ -91,6 +95,13 @@ export default function Header() {
     connectWallet.forEach((path) => {
       path.classList.toggle("cfff");
     });
+    bars.forEach((path) => {
+      path.classList.toggle("sfff");
+    });
+    buttonContainer.forEach((path) => {
+      path.classList.toggle("cfff");
+    });
+
     mint.classList.toggle("b3a4c4a");
     mint.classList.toggle("cfff");
     rewards.classList.toggle("b222");
@@ -106,7 +117,7 @@ export default function Header() {
     previousDrawsElement.addEventListener("mouseout", function () {
       this.style.backgroundColor = "";
     });
-    endsIn.classList.toggle("border-top1px222");
+    endsIn.classList.toggle("border-color222");
     initialDistribution.classList.toggle("border-top1px222");
     claimTokens.classList.toggle("claim_tokens-darkmode");
     lavender.classList.toggle("cfff");
@@ -320,7 +331,7 @@ export default function Header() {
   return (
     <header className="Header">
       <a className="logo" href="">
-        <svg className="logo-svg">
+        <svg xmlns="http://www.w3.org/2000/svg" className="logo-svg">
           <g className="logo-g">
             <path
               d="M1 22.5008L22.4292 1L43 13L25 55L1 22.5008Z"
@@ -357,10 +368,9 @@ export default function Header() {
         {isConnected ? (
           <div className="buttonContainer">
             <span
-              className="pageButtonBold connectButton"
-              // onClick={handleAddressClick}
+            // onClick={handleAddressClick}
             >
-              {displayWalletAddress}
+              {displayWalletAddress} DISCONNECT
             </span>
           </div>
         ) : (
@@ -373,10 +383,9 @@ export default function Header() {
         {isConnected ? (
           <div className="buttonContainer">
             <span
-              className="pageButtonBold connectButton"
-              // onClick={handleAddressClick}
+            // onClick={handleAddressClick}
             >
-              {displayWalletAddress}
+              {displayWalletAddress} DISCONNECT
             </span>
           </div>
         ) : (
@@ -385,7 +394,7 @@ export default function Header() {
           </button>
         )}
         <button className="bars" onClick={handleBarsClick}>
-          <svg className="bars-svg">
+          <svg xmlns="http://www.w3.org/2000/svg" className="bars-svg">
             <path d="M6 26H30" stroke="#222" strokeWidth="2"></path>
             <path d="M6 18H30" stroke="#222" strokeWidth="2"></path>
             <path d="M6 10H30" stroke="#222" strokeWidth="2"></path>
@@ -394,7 +403,11 @@ export default function Header() {
       </div>
       <div className="modal">
         <div className="modal-top">
-          <svg className="logo-svg" onClick={handleBarsClick}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="logo-svg"
+            onClick={handleBarsClick}
+          >
             <g className="logo-g">
               <path
                 d="M1 22.5008L22.4292 1L43 13L25 55L1 22.5008Z"
@@ -415,7 +428,7 @@ export default function Header() {
             ></path>
           </svg>
           <button className="close" onClick={handleBarsClick}>
-            <svg className="close-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" className="close-svg">
               <path d="M6 29.5L29 6.5" stroke="#fff" strokeWidth="3"></path>
               <path d="M29 29.5L6 6.5" stroke="#fff" strokeWidth="3"></path>
             </svg>
@@ -441,7 +454,12 @@ export default function Header() {
         <h2>
           CONNECT WALLET{" "}
           <button className="connect_wallet-close" onClick={handleConnectClick}>
-            <svg width="24" height="24" viewBox="0 0 36 36">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 36 36"
+            >
               <path d="M6 29.5L29 6.5" stroke="#222" strokeWidth="3"></path>
               <path d="M29 29.5L6 6.5" stroke="#222" strokeWidth="3"></path>
             </svg>
@@ -449,7 +467,7 @@ export default function Header() {
         </h2>
         <div className="connect_wallet-modal-btns">
           <button onClick={() => connectWallet()}>
-            <svg>
+            <svg xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M4 6.5L7 4.5L1 0L5.5 2H8V12H7.5L7 12.5L5 11H0.5L1.5 7.5L4 6.5Z"
                 fill="#F4831F"
@@ -497,7 +515,7 @@ export default function Header() {
             METAMASK
           </button>
           <button>
-            <svg>
+            <svg xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M8 12C5.79 12 4 10.21 4 8C4 5.79 5.79 4 8 4C9.86 4 11.41 5.28 11.86 7H15.93C15.44 3.05 12.08 0 8 0C3.58 0 0 3.58 0 8C0 12.42 3.58 16 8 16C12.08 16 15.44 12.95 15.93 9H11.86C11.41 10.72 9.86 12 8 12Z"
                 fill="#0052FF"
@@ -506,7 +524,7 @@ export default function Header() {
             COINBASE WALLET
           </button>
           <button>
-            <svg>
+            <svg xmlns="http://www.w3.org/2000/svg">
               <rect width="16" height="16" rx="2" fill="#141414"></rect>
               <path
                 d="M4.16146 5.48351C6.28145 3.40784 9.71869 3.40784 11.8387 5.48351L12.0939 5.73331C12.1191 5.75771 12.1391 5.78692 12.1527 5.8192C12.1664 5.85148 12.1734 5.88617 12.1734 5.92122C12.1734 5.95627 12.1664 5.99096 12.1527 6.02324C12.1391 6.05552 12.1191 6.08473 12.0939 6.10913L11.2211 6.9637C11.1954 6.98866 11.161 7.00262 11.1251 7.00262C11.0893 7.00262 11.0549 6.98866 11.0292 6.9637L10.678 6.61992C9.19905 5.17187 6.80109 5.17187 5.32216 6.61992L4.94615 6.98808C4.92044 7.01304 4.88602 7.027 4.85019 7.027C4.81435 7.027 4.77993 7.01304 4.75422 6.98808L3.88142 6.13351C3.85626 6.1091 3.83626 6.0799 3.8226 6.04762C3.80894 6.01534 3.8019 5.98064 3.8019 5.94559C3.8019 5.91054 3.80894 5.87585 3.8226 5.84357C3.83626 5.81129 3.85626 5.78209 3.88142 5.75768L4.16146 5.48351ZM13.6438 7.25079L14.4205 8.01138C14.4457 8.03577 14.4657 8.06498 14.4794 8.09726C14.493 8.12954 14.5001 8.16424 14.5001 8.19929C14.5001 8.23434 14.493 8.26904 14.4794 8.30132C14.4657 8.3336 14.4457 8.3628 14.4205 8.3872L10.9179 11.8167C10.8665 11.8666 10.7977 11.8945 10.726 11.8945C10.6543 11.8945 10.5855 11.8666 10.5341 11.8167L8.0481 9.3827C8.03524 9.37021 8.01803 9.36323 8.00011 9.36323C7.9822 9.36323 7.96498 9.37021 7.95213 9.3827L5.46615 11.8166C5.41473 11.8665 5.34589 11.8944 5.27422 11.8944C5.20255 11.8944 5.13371 11.8665 5.08229 11.8166L1.57951 8.38729C1.55436 8.36289 1.53435 8.33368 1.5207 8.3014C1.50704 8.26912 1.5 8.23443 1.5 8.19938C1.5 8.16433 1.50704 8.12964 1.5207 8.09736C1.53435 8.06508 1.55436 8.03587 1.57951 8.01147L2.35635 7.25088C2.40777 7.20095 2.47662 7.17303 2.54828 7.17303C2.61995 7.17303 2.6888 7.20095 2.74021 7.25088L5.22628 9.68467C5.23914 9.69715 5.25635 9.70414 5.27427 9.70414C5.29218 9.70414 5.30939 9.69715 5.32225 9.68467L7.80814 7.25079C7.85956 7.20086 7.9284 7.17294 8.00007 7.17294C8.07173 7.17294 8.14058 7.20086 8.192 7.25079L10.678 9.68476C10.6908 9.69725 10.708 9.70423 10.726 9.70423C10.7439 9.70423 10.7611 9.69725 10.7739 9.68476L13.2599 7.25088C13.3113 7.20095 13.3802 7.17303 13.4519 7.17303C13.5235 7.17303 13.5924 7.20095 13.6438 7.25088V7.25079Z"

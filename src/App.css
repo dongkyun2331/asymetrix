@@ -52,6 +52,10 @@ button {
   border: 1px solid #222 !important;
 }
 
+.border-color222 {
+  border-color: #222 !important;
+}
+
 .claim_tokens-darkmode {
   background-color: #222 !important;
   color: #ffffff80 !important;
@@ -107,4 +111,8 @@ button {
 
 .c222 {
   color: #222 !important;
+}
+
+.sfff {
+  stroke: #fff !important;
 }

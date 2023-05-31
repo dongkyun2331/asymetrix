@@ -348,6 +348,12 @@ export default function Header() {
     disconnectDimm.classList.toggle("disconnect-modal-on");
   };
 
+  const disconnectWallet = useCallback(() => {
+    // 지갑 연결 해제 로직을 여기에 작성합니다.
+    setIsConnected(false);
+    handleAddressClick();
+  }, []);
+
   return (
     <header className="Header">
       <a className="logo" href="">
@@ -568,7 +574,9 @@ export default function Header() {
           <button className="disconnect-cancel" onClick={handleAddressClick}>
             CANCEL
           </button>
-          <button className="disconnect-button">DISCONNECT</button>
+          <button className="disconnect-button" onClick={disconnectWallet}>
+            DISCONNECT
+          </button>
         </div>
       </div>
       <div className="disconnect-dimm" onClick={handleAddressClick}></div>

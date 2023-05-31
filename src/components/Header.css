@@ -311,6 +311,13 @@ header.sticky {
   max-width: 24rem;
   border-radius: 1rem;
   width: 100%;
+  z-index: 2;
+  display: none;
+}
+
+.disconnect-modal-on {
+  display: inherit;
+  flex-direction: column;
 }
 
 .disconnect-content {
@@ -344,6 +351,7 @@ header.sticky {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: 0.4s;
 }
 
 .disconnect-cancel {
@@ -351,9 +359,33 @@ header.sticky {
   background-color: #f4f4f4;
 }
 
+.disconnect-cancel:hover {
+  color: #222;
+  background-color: #f1f1f1;
+}
+
 .disconnect-button {
   color: #fff;
   background-color: #0038ff;
+}
+
+.disconnect-button:hover {
+  color: #222;
+  background-color: #f1f1f1;
+}
+
+.disconnect-dimm {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: none;
+}
+
+.disconnect-dimm.disconnect-modal-on {
+  display: inherit;
 }
 
 @keyframes heartBeat {

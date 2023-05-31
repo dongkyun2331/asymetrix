@@ -86,6 +86,7 @@ export default function Header() {
     const cancelSvg = document.querySelectorAll(".cancel-btn > svg > path");
     const cancelBtn = document.querySelector(".cancel-btn ");
     const convertBtn = document.querySelector(".convert-btn");
+    const disconnectModal = document.querySelector(".disconnect-modal");
 
     Header.classList.toggle("b222");
     body.classList.toggle("b222");
@@ -101,7 +102,6 @@ export default function Header() {
     buttonContainer.forEach((path) => {
       path.classList.toggle("cfff");
     });
-
     mint.classList.toggle("b3a4c4a");
     mint.classList.toggle("cfff");
     rewards.classList.toggle("b222");
@@ -170,6 +170,8 @@ export default function Header() {
     });
     cancelBtn.classList.toggle("c222");
     convertBtn.classList.toggle("b00114f");
+    disconnectModal.classList.toggle("b222");
+    disconnectModal.classList.toggle("cfff");
 
     if (c222Color === "#fff") {
       setc222Color("#222");
@@ -328,7 +330,23 @@ export default function Header() {
     setWalletAddress(result[0]);
   };
 
-  const handleAddressClick = () => {};
+  const handleAddressClick = () => {
+    const logo = document.querySelector(".logo");
+    const nav = document.querySelector(".nav");
+    const section = document.querySelector(".section");
+    const section2 = document.querySelector(".section2");
+    const footer = document.querySelector(".footer");
+    const disconnectModal = document.querySelector(".disconnect-modal");
+    const disconnectDimm = document.querySelector(".disconnect-dimm");
+
+    logo.classList.toggle("blur");
+    nav.classList.toggle("blur");
+    section.classList.toggle("blur");
+    section2.classList.toggle("blur");
+    footer.classList.toggle("blur");
+    disconnectModal.classList.toggle("disconnect-modal-on");
+    disconnectDimm.classList.toggle("disconnect-modal-on");
+  };
 
   return (
     <header className="Header">
@@ -547,10 +565,13 @@ export default function Header() {
           <span>Are you sure you want to logout</span>
         </div>
         <div className="disconnect-btns">
-          <button className="disconnect-cancel">CANCEL</button>
+          <button className="disconnect-cancel" onClick={handleAddressClick}>
+            CANCEL
+          </button>
           <button className="disconnect-button">DISCONNECT</button>
         </div>
       </div>
+      <div className="disconnect-dimm" onClick={handleAddressClick}></div>
     </header>
   );
 }

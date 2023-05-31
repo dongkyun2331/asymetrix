@@ -651,6 +651,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .cancel-btn {
   color: rgba(34, 34, 34, 0.3);
   background-color: rgba(244, 244, 244, 1);
+  cursor: pointer;
 }
 
 .cancel-btn:hover {

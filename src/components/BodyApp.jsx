@@ -563,7 +563,7 @@ export default function BodyApp() {
           enough to cover ethereum network fees (gas)."
         </span>
         <div className="convert-btns">
-          <button className="cancel-btn">
+          <button className="cancel-btn" onClick={handleConvertClick}>
             <svg width={16} height={16} viewBox="0 0 36 36">
               <path
                 d="M6 29.5L29 6.5"

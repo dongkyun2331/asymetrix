@@ -186,8 +186,8 @@ export default function BodyApp() {
     const section2 = document.querySelector(".section2");
     const footer = document.querySelector(".footer");
 
-    convertModal.classList.toggle("modal-on");
-    convertDimm.classList.toggle("modal-on");
+    convertModal.classList.toggle("convert-modal-on");
+    convertDimm.classList.toggle("convert-modal-on");
     Header.classList.toggle("blur");
     section.classList.toggle("blur");
     section2.classList.toggle("blur");

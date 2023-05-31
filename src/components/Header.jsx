@@ -1,10 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import "./Header.css";
+import { ethers } from "ethers";
 
 export default function Header() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [c222Color, setc222Color] = useState("#222");
   const [cfffColor, setcfffColor] = useState("#fff");
+  const [provider, setProvider] = useState(undefined);
+  const [signer, setSigner] = useState(undefined);
+  const [walletAddress, setWalletAddress] = useState(undefined);
+  const [isConnected, setIsConnected] = useState(false);
+  const displayWalletAddress = `0x${walletAddress?.substring(
+    2,
+    5
+  )}...${walletAddress?.substring(38)}`;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,7 +35,7 @@ export default function Header() {
     const draws = document.querySelector(".draws");
     const app = document.querySelector(".app");
     const toggle = document.querySelector(".toggle");
-    const connectWallet = document.querySelector(".connect_wallet");
+    const connectWallet = document.querySelectorAll(".connect_wallet");
     const mint = document.querySelector(".mint");
     const rewards = document.querySelector(".rewards");
     const footerA = document.querySelectorAll(".footer-a");
@@ -79,7 +88,9 @@ export default function Header() {
     draws.classList.toggle("cfff");
     app.classList.toggle("cfff");
     toggle.classList.toggle("cfff");
-    connectWallet.classList.toggle("cfff");
+    connectWallet.forEach((path) => {
+      path.classList.toggle("cfff");
+    });
     mint.classList.toggle("b3a4c4a");
     mint.classList.toggle("cfff");
     rewards.classList.toggle("b222");
@@ -219,6 +230,93 @@ export default function Header() {
     footer.classList.toggle("blur");
   };
 
+  const connectWallet = useCallback(async () => {
+    try {
+      //메타마스크 설치 된 경우
+      if (typeof window.ethereum !== "undefined") {
+        await getMetamaskData();
+        setIsConnected(true);
+        handleConnectClick();
+        //메타마스크 설치 안된 경우
+      } else {
+        alert("please install MetaMask");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }, []);
+
+  const handleChainChanged = async () => {
+    await getMetamaskData();
+  };
+
+  const getMetamaskData = async () => {
+    const _provider = await getProvider();
+    const _signer = await getSigner(_provider);
+
+    // 메타마스크 계정의 네트워크 ID가 변경되었을 때
+    window.ethereum.on("chainChanged", handleChainChanged);
+    window.ethereum.on("accountsChanged", handleAccountsChanged);
+
+    await getWalletData(_signer);
+  };
+
+  const handleAccountsChanged = async (accounts) => {
+    if (accounts.length === 0) {
+      // 계정이 없는 경우 처리
+    } else {
+      // 메타마스크로 선택된 계정 가져오기
+      const selectedAddress = accounts[0];
+
+      // provider, signer 업데이트
+      const _provider = await getProvider();
+      const _signer = await getSigner(_provider);
+
+      await getWalletData(_signer);
+
+      // 해당 계정으로 업데이트
+      setWalletAddress(selectedAddress);
+    }
+  };
+
+  const getProvider = async () => {
+    //메타마스크에서 제공하는 provider를 ethers 모듈에 저장
+    const provider = await new ethers.providers.Web3Provider(window.ethereum);
+
+    //상태변수 저장
+    setProvider(provider);
+
+    return provider;
+  };
+
+  const getSigner = async (provider) => {
+    //메타마스크에 홈페이지 연동 승인 요청
+    await provider.send("eth_requestAccounts", []);
+
+    //메타마스크로 서명 요청
+    const signer = provider.getSigner();
+    //서명 저장
+    setSigner(signer);
+
+    return signer;
+  };
+
+  useEffect(() => {
+    const interval = setInterval(async () => {
+      if (signer) {
+        await getWalletData(signer);
+      }
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [signer]);
+
+  const getWalletData = async (signer) => {
+    const result = await Promise.all([signer.getAddress()]);
+
+    setWalletAddress(result[0]);
+  };
+
   return (
     <header className="Header">
       <a className="logo" href="">
@@ -256,14 +354,36 @@ export default function Header() {
             <span className={`circle ${isDarkMode ? "darkmode" : ""}`}></span>
           </div>
         </button>
-        <button className="connect_wallet " onClick={handleConnectClick}>
-          CONNECT WALLET
-        </button>
+        {isConnected ? (
+          <div className="buttonContainer">
+            <span
+              className="pageButtonBold connectButton"
+              // onClick={handleAddressClick}
+            >
+              {displayWalletAddress}
+            </span>
+          </div>
+        ) : (
+          <button className="connect_wallet " onClick={handleConnectClick}>
+            CONNECT WALLET
+          </button>
+        )}
       </nav>
       <div className="width1024">
-        <button className="connect_wallet" onClick={handleConnectClick}>
-          CONNECT WALLET
-        </button>
+        {isConnected ? (
+          <div className="buttonContainer">
+            <span
+              className="pageButtonBold connectButton"
+              // onClick={handleAddressClick}
+            >
+              {displayWalletAddress}
+            </span>
+          </div>
+        ) : (
+          <button className="connect_wallet " onClick={handleConnectClick}>
+            CONNECT WALLET
+          </button>
+        )}
         <button className="bars" onClick={handleBarsClick}>
           <svg className="bars-svg">
             <path d="M6 26H30" stroke="#222" strokeWidth="2"></path>
@@ -328,7 +448,7 @@ export default function Header() {
           </button>
         </h2>
         <div className="connect_wallet-modal-btns">
-          <button>
+          <button onClick={() => connectWallet()}>
             <svg>
               <path
                 d="M4 6.5L7 4.5L1 0L5.5 2H8V12H7.5L7 12.5L5 11H0.5L1.5 7.5L4 6.5Z"

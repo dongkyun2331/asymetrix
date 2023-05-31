@@ -549,7 +549,7 @@ input[type="number"]::-webkit-outer-spin-button {
   z-index: 2;
 }
 
-.modal-on {
+.convert-modal-on {
   display: inherit;
 }
 
@@ -563,7 +563,7 @@ input[type="number"]::-webkit-outer-spin-button {
   z-index: 1;
 }
 
-.convert-dimm.modal-on {
+.convert-dimm.convert-modal-on {
   display: inherit;
 }
 

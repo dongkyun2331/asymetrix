@@ -115,7 +115,7 @@ export default function BodyApp() {
   }, []);
 
   useEffect(() => {
-    const targetTime = moment("2023-06-02 15:41");
+    const targetTime = moment("2023-06-09 15:41");
 
     const interval = setInterval(() => {
       const currentTime = moment();
